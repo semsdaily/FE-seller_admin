@@ -10,6 +10,7 @@ import { PiAppleLogo, PiArrowLeftBold } from 'react-icons/pi';
 import { FcGoogle } from 'react-icons/fc';
 import OrSeparation from './or-separation';
 import toast from 'react-hot-toast';
+import { useEffect, useState } from 'react';
 
 export default function AuthWrapperOne({
   children,
@@ -17,7 +18,6 @@ export default function AuthWrapperOne({
   bannerTitle,
   bannerDescription,
   description,
-  pageImage,
   isSocialLoginActive = false,
   isSignIn = false,
 }: {
@@ -26,7 +26,6 @@ export default function AuthWrapperOne({
   description?: string;
   bannerTitle?: string;
   bannerDescription?: string;
-  pageImage?: React.ReactNode;
   isSocialLoginActive?: boolean;
   isSignIn?: boolean;
 }) {
@@ -41,6 +40,21 @@ export default function AuthWrapperOne({
       </Text>
     );
   }
+
+
+  const randomImg = [
+    '"https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fed%2Ff9%2Fedf94872e0c847e80828b4580038e9881d7e8573.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]"',
+    '"https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F68%2F23%2F6823002cdb4b0c60891e08321e8fcbad5210c867.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]"',
+    '"https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F84%2Fe4%2F84e4c283c18e333a0d9208ea9725e7de7075c2d1.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]"'
+  ]
+
+  const [randomNum, setRandomNum] = useState<number>(0);
+
+
+  useEffect(() => {
+    setRandomNum(Math.floor(Math.random() * 3))
+  },[])
+
   return (
     <>
       <Link
@@ -61,10 +75,10 @@ export default function AuthWrapperOne({
               <PiArrowLeftBold />
               <b className="ms-1 font-medium">Back to home</b>
             </Link>
-            <div className="mb-7 px-6 pt-3 text-center md:pt-0 lg:px-0 lg:text-start xl:mb-8 2xl:mb-10">
+            <div className="mb-7 px-0 pt-3 text-center md:pt-0 md:px-0 md:text-start xl:mb-8 2xl:mb-10">
               <Link
                 href={'/'}
-                className="mb-6 inline-flex max-w-[168px] xl:mb-8"
+                className="mb-6 inline-flex max-w-[320px] md:max-w-[220px] xl:mb-8"
               >
                 <Image src={logoImg} alt="Isomorphic" width="100" height="80" priority/>
                 <Image
@@ -118,21 +132,16 @@ export default function AuthWrapperOne({
             {children}
           </div>
         </div>
-        <div className="hidden w-7/12 items-center justify-center rounded-[20px] bg-gray-50 px-6 dark:bg-gray-100/40 lg:flex xl:justify-start 2xl:px-16">
-          <div className="pb-8 pt-10 text-center xl:pt-16 2xl:block 2xl:w-[1063px]">
-            <div className="mx-auto mb-10 max-w-sm pt-2 2xl:max-w-lg">
-              <Title
-                as="h2"
-                className="mb-5 font-semibold !leading-normal lg:text-[26px] 2xl:px-10 2xl:text-[32px]"
-              >
-                {bannerTitle}
-              </Title>
-              <Text className="leading-[1.85] text-gray-700 md:leading-loose 2xl:px-6">
-                {bannerDescription}
-              </Text>
-            </div>
-            
-          </div>
+        <div 
+          className="
+          hidden w-7/12 items-center 
+          justify-center rounded-[20px] 
+          bg-gray-50 px-6 
+          dark:bg-gray-100/40 
+          lg:flex xl:justify-start 2xl:px-16
+          "
+          style={{ backgroundImage: `url(${randomImg[randomNum]})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center'}}
+        >
         </div>
       </div>
     </>

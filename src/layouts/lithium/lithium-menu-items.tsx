@@ -550,7 +550,7 @@ export const menuItems: MenuItemsType[] = [
         subMenuItems: [
           {
             name: 'Modern Sign Up',
-            href: routes.auth.signUp1,
+            href: routes.auth.signUp,
           },
           {
             name: 'Vintage Sign Up',
@@ -581,7 +581,7 @@ export const menuItems: MenuItemsType[] = [
         subMenuItems: [
           {
             name: 'Modern Sign In',
-            href: routes.auth.signIn1,
+            href: routes.auth.signIn,
           },
           {
             name: 'Vintage Sign In',

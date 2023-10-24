@@ -87,13 +87,13 @@ export const routes = {
   maintenance: '/maintenance',
   blank: '/blank',
   auth: {
-    signUp1: '/auth/sign-up-1',
+    signUp: '/auth/sign-up',
     signUp2: '/auth/sign-up-2',
     signUp3: '/auth/sign-up-3',
     signUp4: '/auth/sign-up-4',
     signUp5: '/auth/sign-up-5',
     // sign in
-    signIn1: '/auth/sign-in-1',
+    signIn: '/auth/sign-in',
     signIn2: '/auth/sign-in-2',
     signIn3: '/auth/sign-in-3',
     signIn4: '/auth/sign-in-4',
