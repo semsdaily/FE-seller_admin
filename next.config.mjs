@@ -63,6 +63,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'isomorphic-furyroad.s3.amazonaws.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'lp2.hm.com',
+      }
     ],
   },
 };

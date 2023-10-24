@@ -97,7 +97,7 @@ export default function SignInForm() {
       <Text className="mt-6 text-center leading-loose text-gray-500 lg:mt-8 lg:text-start">
         아직 회원가입을 안하셨다면?{' '}
         <Link
-          href={routes.auth.signUp1}
+          href={routes.auth.signUp}
           className="font-semibold text-gray-700 transition-colors hover:text-blue"
         >
           회원가입
