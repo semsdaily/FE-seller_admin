@@ -105,20 +105,20 @@ export default function ForgetPasswordForm() {
               className="mt-2 w-full"
               type="submit"
               size="lg"
-              color="info"
+              color="DEFAULT"
             >
-              Reset Password
+              비밀번호 찾기
             </Button>
           </div>
         )}
       </Form>
       <Text className="mt-6 text-center text-[15px] leading-loose text-gray-500 lg:mt-8 lg:text-start xl:text-base">
-        Don’t want to reset your password?{' '}
+        비밀번호 찾는걸 원하지 않으신다면?{' '}
         <Link
           href={routes.auth.signIn1}
           className="font-bold text-gray-700 transition-colors hover:text-blue"
         >
-          Sign In
+          로그인하기
         </Link>
       </Text>
     </>

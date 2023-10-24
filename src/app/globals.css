@@ -171,6 +171,7 @@
 
   body {
     @apply flex min-h-full flex-col overflow-x-hidden text-sm text-gray-600 dark:bg-gray-50;
+    font-family: 'SoyoMaple';
   }
 
   input::-ms-clear,
@@ -989,3 +990,4 @@ div[style='z-index: 1000001;'],
   @apply !bg-primary;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');

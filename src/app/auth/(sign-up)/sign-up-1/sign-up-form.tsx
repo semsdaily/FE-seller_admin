@@ -83,8 +83,8 @@ export default function SignUpForm() {
             <Input
               type="text"
               size="lg"
-              label="First Name"
-              placeholder="Enter your first name"
+              label="성"
+              // placeholder="Enter your first name"
               className="[&>label>span]:font-medium"
               color="info"
               inputClassName="text-sm"
@@ -94,8 +94,8 @@ export default function SignUpForm() {
             <Input
               type="text"
               size="lg"
-              label="Last Name"
-              placeholder="Enter your last name"
+              label="이름"
+              // placeholder="Enter your last name"
               className="[&>label>span]:font-medium"
               color="info"
               inputClassName="text-sm"
@@ -139,19 +139,20 @@ export default function SignUpForm() {
                 className="[&>label>span]:font-medium [&>label]:items-start"
                 label={
                   <>
-                    By signing up you have agreed to our{' '}
+                    마케팅 및 광고성 활용 수신동의{' '}
                     <Link
                       href="/"
+                      color='red'
                       className="font-medium text-blue transition-colors hover:underline"
                     >
-                      Terms
+                      수신
                     </Link>{' '}
                     &{' '}
                     <Link
                       href="/"
                       className="font-medium text-blue transition-colors hover:underline"
                     >
-                      Privacy Policy
+                      동의
                     </Link>
                   </>
                 }
@@ -159,23 +160,23 @@ export default function SignUpForm() {
             </div>
             <Button
               size="lg"
-              color="info"
+              color="DEFAULT"
               type="submit"
               className="col-span-2 mt-2"
             >
-              <span>Get Started</span>{' '}
+              <span>회원가입</span>{' '}
               <PiArrowRightBold className="ms-2 mt-0.5 h-5 w-5" />
             </Button>
           </div>
         )}
       </Form>
       <Text className="mt-6 text-center leading-loose text-gray-500 lg:mt-8 lg:text-start">
-        Don’t have an account?{' '}
+        이미 가입되어 있으시다면?{' '}
         <Link
           href={routes.auth.signIn1}
           className="font-semibold text-gray-700 transition-colors hover:text-blue"
         >
-          Sign In
+          로그인하기
         </Link>
       </Text>
     </>

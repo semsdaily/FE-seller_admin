@@ -74,34 +74,33 @@ export default function SignInForm() {
               error={errors.password?.message}
             />
             <div className="flex items-center justify-between pb-2">
-              <Checkbox
-                {...register('remember')}
-                label="Remember Me"
-                color="info"
-                variant="flat"
-                className="[&>label>span]:font-medium"
-              />
               <Link
                 href={routes.auth.forgotPassword1}
                 className="h-auto p-0 text-sm font-semibold text-blue underline transition-colors hover:text-gray-900 hover:no-underline"
               >
-                Forget Password?
+                ID 찾기
+              </Link>
+              <Link
+                href={routes.auth.forgotPassword1}
+                className="h-auto p-0 text-sm font-semibold text-blue underline transition-colors hover:text-gray-900 hover:no-underline"
+              >
+                PW 찾기
               </Link>
             </div>
-            <Button className="w-full" type="submit" size="lg" color="info">
-              <span>Sign in</span>{' '}
+            <Button className="w-full" type="submit" size="lg" color="DEFAULT">
+              <span>로그인</span>{' '}
               <PiArrowRightBold className="ms-2 mt-0.5 h-6 w-6" />
             </Button>
           </div>
         )}
       </Form>
       <Text className="mt-6 text-center leading-loose text-gray-500 lg:mt-8 lg:text-start">
-        Don’t have an account?{' '}
+        아직 회원가입을 안하셨나요?{' '}
         <Link
           href={routes.auth.signUp1}
           className="font-semibold text-gray-700 transition-colors hover:text-blue"
         >
-          Sign Up
+          회원가입하기
         </Link>
       </Text>
     </>

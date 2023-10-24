@@ -8,16 +8,15 @@ export default function SignIn() {
     <AuthWrapperOne
       title={
         <>
-          Welcome back! Please{' '}
+          {/* GentleDog에 오신것을 환영합니다.{' '} */}
           <span className="relative inline-block">
-            Sign in to
+          GentleDog
             <UnderlineShape className="absolute -bottom-2 start-0 h-2.5 w-24 text-blue md:w-28 xl:-bottom-1.5 xl:w-36" />
           </span>{' '}
-          continue.
+          에 오신것을 환영합니다.
         </>
       }
-      description="By signing up, you will gain access to exclusive content, special
-      offers, and be the first to hear about exciting news and updates."
+      description="GentleDog는 AI를 활용한 우리 아이에게 어울리는 옷을 추천해주는 애견전용 맞춤 쇼핑몰입니다."
       bannerTitle="The simplest way to manage your workspace."
       bannerDescription="Amet minim mollit non deserunt ullamco est sit aliqua dolor do
       amet sint velit officia consequat duis."
