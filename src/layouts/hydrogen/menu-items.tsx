@@ -385,7 +385,7 @@ export const menuItems = [
     dropdownItems: [
       {
         name: 'Modern Sign up',
-        href: routes.auth.signUp1,
+        href: routes.auth.signUp,
       },
       {
         name: 'Vintage Sign up',
@@ -412,7 +412,7 @@ export const menuItems = [
     dropdownItems: [
       {
         name: 'Modern Sign in',
-        href: routes.auth.signIn1,
+        href: routes.auth.signIn,
       },
       {
         name: 'Vintage Sign in',
