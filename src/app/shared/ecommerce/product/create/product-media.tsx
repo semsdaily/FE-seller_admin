@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useFormContext } from 'react-hook-form';
 import { Input } from '@/components/ui/input';
 import FormGroup from '@/app/shared/form-group';
@@ -9,6 +9,7 @@ import cn from '@/utils/class-names';
 import { Radio } from '@/components/ui/radio';
 import TrashIcon from '@/components/icons/trash';
 import Upload from '@/components/ui/upload';
+import { PutObjectCommand, S3Client } from '@aws-sdk/client-s3';
 
 interface ProductMediaProps {
   className?: string;
@@ -21,6 +22,9 @@ export default function ProductMedia({ className }: ProductMediaProps) {
     formState: { errors },
   } = useFormContext();
 
+  useEffect(() => {
+    console.log(control);
+  },[])
   return (
     <FormGroup
       title="Upload new product images"
@@ -39,6 +43,27 @@ export const MultipleFiles = ({
   className?: string;
   label?: React.ReactNode;
 }) => {
+
+  const s3 = new S3Client({
+    region: process.env.NEXT_PUBLIC_AWS_REGION as string,
+    credentials: {
+      accessKeyId: process.env.NEXT_PUBLIC_AWS_ACCESS_KEY_ID as string,
+      secretAccessKey: process.env.NEXT_PUBLIC_AWS_SECRET_ACCESS_KEY as string,
+    },
+  }) 
+
+  // s3 upload
+  const s3Upload = async (file: File) => {
+    const params = {
+      Bucket: process.env.NEXT_PUBLIC_AWS_BUCKET_NAME as string,
+      Key: file.name,
+      Body: file,
+    };
+    const data = await s3.send(new PutObjectCommand(params));
+    console.log(data);
+  }
+
+
   const multiRef = useRef<HTMLInputElement>(null);
   const [multiImages, setMultiImages] = useState<Array<File>>([]);
 
