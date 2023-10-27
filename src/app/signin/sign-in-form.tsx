@@ -31,6 +31,7 @@ const initialValues: Login = {
 export default function SignInForm() {
   //TODO: why we need to reset it here
   const [reset, setReset] = useState({});
+  console.log(process.env.AWS_REGION)
 
   const onSubmit: SubmitHandler<Login> = (data) => {
     console.log(data);
@@ -73,6 +74,21 @@ export default function SignInForm() {
               {...register('password')}
               error={errors.password?.message}
             />
+            <div className="flex items-center justify-between pb-2">
+              <Checkbox
+                {...register('remember')}
+                label="Remember Me"
+                color="info"
+                variant="flat"
+                className="[&>label>span]:font-medium"
+              />
+              <Link
+                href={routes.auth.forgotPassword1}
+                className="h-auto p-0 text-sm font-semibold text-blue underline transition-colors hover:text-gray-900 hover:no-underline"
+              >
+                Forget Password?
+              </Link>
+            </div>
             <div className="flex items-center justify-between pb-2">
               <Link
                 href={routes.auth.forgotPassword1}

@@ -142,7 +142,9 @@ function Upload(
   }: React.PropsWithChildren<UploadProps>,
   ref: ForwardedRef<HTMLInputElement>
 ) {
+
   return (
+    
     <div className={cn(wrapperClassName)}>
       {label && (
         <label className={cn('mb-2 block text-sm font-medium', labelClassName)}>
@@ -170,14 +172,14 @@ function Upload(
           {...dropzoneInputProps}
         />
         <div className="flex flex-col items-center @2xl:flex-row">
-          <UploadIcon
+          {/* <UploadIcon
             className={cn(
               variant !== 'outline' && !props.disabled
                 ? inputClasses.lightTextColor[color]
                 : 'text-gray-300',
               iconClassName
             )}
-          />
+          /> */}
           {placeholderText || (
             <div className="@5xl::ps-10 pt-2 text-center @2xl:ps-5 @2xl:text-left">
               <h5 className="mb-2 text-sm font-bold text-gray-900 @2xl:text-base @3xl:mb-3 @3xl:text-lg">

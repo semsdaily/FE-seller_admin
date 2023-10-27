@@ -30,6 +30,8 @@ const initialValues: Login = {
 
 export default function SignInForm() {
   //TODO: why we need to reset it here
+
+  console.log(process.env.NEXT_PUBLIC_AWS_REGION)
   const [reset, setReset] = useState({});
 
   const onSubmit: SubmitHandler<Login> = (data) => {
