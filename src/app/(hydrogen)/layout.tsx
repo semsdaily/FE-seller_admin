@@ -18,11 +18,11 @@ export default function DefaultLayout({
     return null;
   }
 
-  if (layout === LAYOUT_OPTIONS.HELIUM) {
-    return <HeliumLayout>{children}</HeliumLayout>;
-  }
-  if (layout === LAYOUT_OPTIONS.LITHIUM) {
-    return <LithiumLayout>{children}</LithiumLayout>;
-  }
+  // if (layout === LAYOUT_OPTIONS.HELIUM) {
+  //   return <HeliumLayout>{children}</HeliumLayout>;
+  // }
+  // if (layout === LAYOUT_OPTIONS.LITHIUM) {
+  //   return <LithiumLayout>{children}</LithiumLayout>;
+  // }
   return <HydrogenLayout>{children}</HydrogenLayout>;
 }
