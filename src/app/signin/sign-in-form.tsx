@@ -17,7 +17,6 @@ import { SubmitHandler } from 'react-hook-form';
 const loginSchema = z.object({
   username: z.string().email({ message: 'Invalid username' }),
   password: z.string().min(1, { message: 'Password is required' }),
-  remember: z.boolean(),
 });
 
 type Login = z.infer<typeof loginSchema>;
@@ -25,7 +24,6 @@ type Login = z.infer<typeof loginSchema>;
 const initialValues: Login = {
   username: 'admin@admin.com',
   password: 'admin',
-  remember: true,
 };
 
 export default function SignInForm() {
@@ -74,21 +72,6 @@ export default function SignInForm() {
               {...register('password')}
               error={errors.password?.message}
             />
-            <div className="flex items-center justify-between pb-2">
-              <Checkbox
-                {...register('remember')}
-                label="Remember Me"
-                color="info"
-                variant="flat"
-                className="[&>label>span]:font-medium"
-              />
-              <Link
-                href={routes.auth.forgotPassword1}
-                className="h-auto p-0 text-sm font-semibold text-blue underline transition-colors hover:text-gray-900 hover:no-underline"
-              >
-                Forget Password?
-              </Link>
-            </div>
             <div className="flex items-center justify-between pb-2">
               <Link
                 href={routes.auth.forgotPassword1}
