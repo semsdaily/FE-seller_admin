@@ -32,8 +32,8 @@ const MAP_STEP_TO_COMPONENT = {
   [formParts.pricingInventory]: PricingInventory,
   [formParts.productIdentifiers]: ProductIdentifiers,
   [formParts.shipping]: ShippingInfo,
-  [formParts.seo]: ProductSeo,
-  [formParts.deliveryEvent]: DeliveryEvent,
+  // [formParts.seo]: ProductSeo,
+  // [formParts.deliveryEvent]: DeliveryEvent,
   [formParts.variantOptions]: ProductVariants,
   [formParts.tagsAndCategory]: ProductTaxonomies,
 };
@@ -70,6 +70,7 @@ export default function CreateProduct({ id, product, className }: IndexProps) {
         <form
           onSubmit={methods.handleSubmit(onSubmit)}
           className={cn('[&_label.block>span]:font-medium', className)}
+          style={{ minHeight: '3000px' }}
         >
           <div className="mb-10 grid gap-7 divide-y divide-dashed divide-gray-200 @2xl:gap-9 @3xl:gap-11">
             {Object.entries(MAP_STEP_TO_COMPONENT).map(([key, Component]) => (
