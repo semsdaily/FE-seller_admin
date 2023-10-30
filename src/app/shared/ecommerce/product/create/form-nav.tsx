@@ -16,31 +16,31 @@ export const formParts = {
 
 export const menuItems = [
   {
-    label: 'Summary',
+    label: '필수정보',
     value: formParts.summary,
   },
   {
-    label: 'Images & Gallery',
+    label: '이미지',
     value: formParts.media,
   },
   {
-    label: 'Pricing & Inventory',
+    label: '가격/할인',
     value: formParts.pricingInventory,
   },
   {
-    label: 'Product Identifiers & Custom Fields',
+    label: '상품code',
     value: formParts.productIdentifiers,
   },
   {
-    label: 'Shipping',
+    label: '배송정보',
     value: formParts.shipping,
   },
+  // {
+  //   label: '검색엔진최적화',
+  //   value: formParts.seo,
+  // },
   {
-    label: 'SEO',
-    value: formParts.seo,
-  },
-  {
-    label: 'Variant Options',
+    label: '옵션',
     value: formParts.variantOptions,
   },
 ];

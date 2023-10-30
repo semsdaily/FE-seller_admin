@@ -31,8 +31,8 @@ export default function ShippingInfo({ className }: { className?: string }) {
 
   return (
     <FormGroup
-      title="Shipping"
-      description="Add your shipping info here"
+      title="배송비"
+      description="배송비를 입력해주세요"
       className={cn(className)}
     >
       <Controller
@@ -40,7 +40,7 @@ export default function ShippingInfo({ className }: { className?: string }) {
         control={control}
         render={({ field: { value, onChange } }) => (
           <Switch
-            label="Free Shipping"
+            label="배송비 무료"
             className="col-span-full"
             value={value}
             checked={value}
@@ -52,11 +52,11 @@ export default function ShippingInfo({ className }: { className?: string }) {
       />
 
       <Input
-        label="Shipping Price"
-        placeholder="150.00"
+        label="배송가격"
+        placeholder="3000"
         {...register('shippingPrice')}
         error={errors.shippingPrice?.message as string}
-        prefix={'$'}
+        prefix={'￦'}
         type="number"
       />
       <Controller
@@ -64,7 +64,7 @@ export default function ShippingInfo({ className }: { className?: string }) {
         control={control}
         render={({ field: { value, onChange } }) => (
           <Switch
-            label="Location Based Shipping"
+            label="국내배송"
             className="col-span-full"
             value={value}
             checked={value}

@@ -164,19 +164,19 @@ export const menuItems = [
 export const categoryOption = [
   {
     value: 'fruits',
-    name: 'Fruits',
+    name: '봄',
   },
   {
     value: 'grocery',
-    name: 'Grocery',
+    name: '여름',
   },
   {
     value: 'meat',
-    name: 'Meat',
+    name: '가을',
   },
   {
     value: 'cat food',
-    name: 'Cat Food',
+    name: '겨울',
   },
 ];
 
@@ -184,11 +184,15 @@ export const categoryOption = [
 export const typeOption = [
   {
     value: 'digital product',
-    name: 'Digital Product',
+    name: '대형견',
   },
   {
     value: 'physical product',
-    name: 'Physical Product',
+    name: '중형견',
+  },
+  {
+    value: 'physical product',
+    name: '소형견',
   },
 ];
 
@@ -196,10 +200,10 @@ export const typeOption = [
 export const variantOption = [
   {
     value: 'single',
-    name: 'Single',
+    name: '색상',
   },
   {
     value: 'multiple',
-    name: 'Multiple',
+    name: '사이즈',
   },
 ];

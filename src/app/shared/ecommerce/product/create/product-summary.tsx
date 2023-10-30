@@ -27,19 +27,19 @@ export default function ProductSummary({ className }: { className?: string }) {
 
   return (
     <FormGroup
-      title="Summary"
-      description="Edit your product description and necessary information from here"
+      title="필수정보"
+      description="필수정보는 꼭 입력해주셔야 상품이 등록됩니다."
       className={cn(className)}
     >
       <Input
-        label="Title"
-        placeholder="Product title"
+        label="상품명"
+        placeholder="상품명을 입력해주세요"
         {...register('title')}
         error={errors.title?.message as string}
       />
       <Input
-        label="SKU"
-        placeholder="Product sku"
+        label="재고관리 code"
+        placeholder="재고관리 code를 입력해주세요"
         {...register('sku')}
         error={errors.sku?.message as string}
       />
@@ -52,7 +52,7 @@ export default function ProductSummary({ className }: { className?: string }) {
             options={typeOption}
             value={value}
             onChange={onChange}
-            label="Product Type"
+            label="상품 타입"
             error={errors?.type?.message as string}
             getOptionValue={(option) => option.name}
           />
@@ -67,7 +67,7 @@ export default function ProductSummary({ className }: { className?: string }) {
             options={categoryOption}
             value={value}
             onChange={onChange}
-            label="Categories"
+            label="카테고리"
             error={errors?.categories?.message as string}
             getOptionValue={(option) => option.name}
           />
@@ -81,7 +81,7 @@ export default function ProductSummary({ className }: { className?: string }) {
           <QuillEditor
             value={value}
             onChange={onChange}
-            label="Description"
+            label="상품설명"
             className="col-span-full [&_.ql-editor]:min-h-[100px]"
             labelClassName="font-medium text-gray-700 dark:text-gray-600 mb-1.5"
           />

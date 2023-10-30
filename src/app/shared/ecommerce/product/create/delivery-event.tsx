@@ -13,8 +13,8 @@ export default function DeliveryEvent({ className }: { className?: string }) {
   } = useFormContext();
   return (
     <FormGroup
-      title="Delivery / Event Date"
-      description="Add delivery or vent Date here"
+      title="예약구매"
+      description="예약구매 날짜를 설정해주세요"
       className={cn(className)}
     >
       <Controller
@@ -25,14 +25,14 @@ export default function DeliveryEvent({ className }: { className?: string }) {
             value={value}
             checked={value}
             onChange={onChange}
-            label="Yes, customers must specify a date to purchase this product"
+            label="고객이 예약구매를 할 수 있도록 허용합니다"
             className="col-span-full"
           />
         )}
       />
       <Input
-        label="Date Field Name"
-        placeholder="Date Field Name"
+        label="날짜 이름"
+        placeholder="기념일을 적어주세요"
         className="col-span-full"
         {...register('dateFieldName')}
         error={errors.dateFieldName?.message as string}
@@ -45,7 +45,7 @@ export default function DeliveryEvent({ className }: { className?: string }) {
             value={value}
             checked={value}
             onChange={onChange}
-            label="I want to limit the date range"
+            label="구매 기한 정하기"
             className="col-span-full"
           />
         )}
@@ -55,7 +55,7 @@ export default function DeliveryEvent({ className }: { className?: string }) {
         control={control}
         render={({ field: { value, onChange, onBlur } }) => (
           <DatePicker
-            inputProps={{ label: 'Available date' }}
+            inputProps={{ label: '시작하는 날' }}
             placeholderText="Select Date"
             dateFormat="dd/MM/yyyy"
             onChange={onChange}
@@ -69,7 +69,7 @@ export default function DeliveryEvent({ className }: { className?: string }) {
         control={control}
         render={({ field: { value, onChange, onBlur } }) => (
           <DatePicker
-            inputProps={{ label: 'End date' }}
+            inputProps={{ label: '마지막 날' }}
             placeholderText="Select Date"
             dateFormat="dd/MM/yyyy"
             onChange={onChange}

@@ -123,12 +123,12 @@ export default function StorageReport({ className }: { className?: string }) {
 
   return (
     <WidgetCard
-      title={'Total Storage used'}
+      title={'총 매출액'}
       titleClassName="font-normal text-gray-700 sm:text-base font-inter"
       description={
         <div className="flex items-center justify-start">
           <Title as="h2" className="me-2">
-            105,000 GB
+            80,000,000￦
           </Title>
           <Text className="flex items-center leading-none text-gray-500">
             <Text
@@ -138,23 +138,23 @@ export default function StorageReport({ className }: { className?: string }) {
               )}
             >
               <TrendingUpIcon className="me-1 h-4 w-4" />
-              32.40%
+              38.45%
             </Text>
-            last year
+            Last year
           </Text>
         </div>
       }
       descriptionClassName="text-gray-500 mt-1.5"
       action={
         <div className="hidden @2xl:block">
-          <Badge renderAsDot className="me-0.5 bg-[#282ECA]" /> Image
-          <Badge renderAsDot className="me-0.5 ms-4 bg-[#4052F6]" /> Video
-          <Badge renderAsDot className="me-0.5 ms-4 bg-[#96C0FF]" /> Documents
+          <Badge renderAsDot className="me-0.5 bg-[#282ECA]" /> 매출액
+          <Badge renderAsDot className="me-0.5 ms-4 bg-[#4052F6]" /> 매출원가
+          <Badge renderAsDot className="me-0.5 ms-4 bg-[#96C0FF]" /> 총 수익
           <Badge
             renderAsDot
             className="me-0.5 ms-4 bg-[#DEEAFC] dark:bg-[#7c88b2]"
           />{' '}
-          Musics
+          수수료
         </div>
       }
       className={className}
