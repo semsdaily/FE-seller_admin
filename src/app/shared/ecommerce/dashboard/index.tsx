@@ -13,7 +13,7 @@ import PromotionalSales from '@/app/shared/ecommerce/dashboard/promotional-sales
 import RecentOrder from '@/app/shared/ecommerce/dashboard/recent-order';
 import StockReport from '@/app/shared/ecommerce/dashboard/stock-report';
 import { PiPlusBold } from 'react-icons/pi';
-import welcomeImg from '@public/shop-illustration.png';
+import welcomeImg from '@public/assets/images/dog15.png';
 import HandWaveIcon from '@/components/icons/hand-wave';
 
 export default function EcommerceDashboard() {
@@ -23,20 +23,20 @@ export default function EcommerceDashboard() {
         <WelcomeBanner
           title={
             <>
-              Good Morning, <br /> Cameron{' '}
+              판매자관리 <br /> 페이지{' '}
               <HandWaveIcon className="inline-flex h-8 w-8" />
             </>
           }
           description={
-            'Here’s What happening on your store today. See the statistics at once.'
+            'GentleDog에 입점한 벤더사분들의 상점 관리 페이지입니다.'
           }
           media={
-            <div className="absolute -bottom-6 end-4 hidden w-[300px] @2xl:block lg:w-[320px] 2xl:-bottom-7 2xl:w-[330px]">
+            <div className="absolute bottom-1 end-4 hidden w-[300px] @2xl:block lg:w-[320px] 2xl:-bottom-7 2xl:w-[330px]">
               <div className="relative">
                 <Image
                   src={welcomeImg}
                   alt="Welcome shop image form freepik"
-                  className="dark:brightness-95 dark:drop-shadow-md"
+                  className="dark:brightness-95 dark:drop-shadow-md h-[250px]"
                 />
               </div>
             </div>

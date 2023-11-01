@@ -51,13 +51,13 @@ export default function ProfitWidget({ className }: { className?: string }) {
 
   return (
     <WidgetCard
-      title={'Total Profit'}
-      description={'$8,950.00'}
+      title={'매출액'}
+      description={'80,000,000 ￦'}
       titleClassName="text-gray-500 font-normal font-inter !text-sm"
       descriptionClassName="text-lg font-semibold sm:text-xl 3xl:text-2xl text-gray-900 font-lexend mt-1"
       action={
         <Button variant="outline" size="sm" className="text-sm">
-          Details
+          상세내용
         </Button>
       }
       headerClassName="mb-6"

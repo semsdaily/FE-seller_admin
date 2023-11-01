@@ -130,8 +130,8 @@ const eComDashboardStatData = [
   {
     id: '1',
     icon: <PiGiftDuotone className="h-6 w-6" />,
-    title: 'New Orders',
-    metric: '1,390',
+    title: '신규 주문수',
+    metric: '5,490',
     increased: true,
     decreased: false,
     percentage: '+32.40',
@@ -142,7 +142,7 @@ const eComDashboardStatData = [
   {
     id: '2',
     icon: <PiChartPieSliceDuotone className="h-6 w-6" />,
-    title: 'Sales',
+    title: 'Sale 항목',
     metric: '$57,890',
     increased: false,
     decreased: true,
@@ -154,7 +154,7 @@ const eComDashboardStatData = [
   {
     id: '3',
     icon: <PiBankDuotone className="h-6 w-6" />,
-    title: 'Revenue',
+    title: '총 수익',
     metric: '$12,390',
     increased: true,
     decreased: false,

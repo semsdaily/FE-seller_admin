@@ -7,22 +7,22 @@ import {
 
 const socialData = [
   {
-    title: 'Facebook',
+    title: '대형견',
     icon: <PiFacebookLogoFill className="h-auto w-4" />,
     link: 'https://facebook.com',
   },
   {
-    title: 'Twitter',
+    title: '중형견',
     icon: <PiTwitterLogoFill className="h-auto w-4" />,
     link: 'https://twitter.com',
   },
   {
-    title: 'Instagram',
+    title: '소형견',
     icon: <PiInstagramLogoFill className="h-auto w-4" />,
     link: 'https://instagram.com',
   },
   {
-    title: 'Youtube',
+    title: '핸드메이드',
     icon: <PiYoutubeLogoFill className="h-auto w-4" />,
     link: 'https://youtube.com',
   },

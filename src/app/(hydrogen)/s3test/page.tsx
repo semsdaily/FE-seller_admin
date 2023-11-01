@@ -1,13 +1,15 @@
 'use client';
 import AWS from "aws-sdk";
 import { createPresignedPost } from "@aws-sdk/s3-presigned-post";
-import React from "react";
+import React, { useState } from "react";
+import Image from 'next/image'
 
 export default function Home() {
   const [file, setFile] = React.useState<File | null>(null);
   const [uploading, setUploading] = React.useState<boolean>(false);
   const [message, setMessage] = React.useState<string>("");
   const [show, setShow] = React.useState<string>("hidden");
+  const [s3location, setS3location] = useState<string>("");
 
   AWS.config.update({
     region: process.env.AWS_REGION as string,
@@ -32,7 +34,8 @@ export default function Home() {
     });
 
     const promise = upload.promise();
-    console.log("promise", promise);
+    setS3location((await promise).Location)
+    console.log("promise", (await promise).Location);
 
   };
 
@@ -108,6 +111,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {
+        s3location &&  <Image src={s3location} width={200} height={200} alt='s3' />
+      }
     </main>
   );
 }
