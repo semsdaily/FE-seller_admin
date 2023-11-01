@@ -60,6 +60,10 @@ module.exports = {
       {
         protocol: 'https',
         hostname: 'gentledog-bucket.s3.ap-northeast-2.amazonaws.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'lp2.hm.com'
       }
     ],
   },

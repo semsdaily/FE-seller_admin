@@ -29,7 +29,7 @@ export default async function RootLayout({
   const session = await getServerSession(authOptions);
   return (
     <html
-      lang="en"
+      lang="ko"
       dir="ltr"
       // required this one for next-themes, remove it if you are not using next-theme
       suppressHydrationWarning

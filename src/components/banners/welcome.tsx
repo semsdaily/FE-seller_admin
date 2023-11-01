@@ -23,6 +23,7 @@ export default function WelcomeBanner({
         'relative flex items-center justify-between rounded-lg bg-gray-100/60 p-5 dark:bg-gray-100 sm:p-6 lg:p-7',
         className
       )}
+      // style={{ backgroundImage: 'url("/assets/images/dog15.png")' , backgroundRepeat: 'no-repeat', backgroundPosition: 'right, bottom', backgroundSize: '220px auto'}}
     >
       <div className={cn(contentClassName)}>
         <Title as="h2" className="mb-2 text-2xl sm:mb-3 md:text-3xl">
@@ -35,7 +36,7 @@ export default function WelcomeBanner({
         )}
         {children}
       </div>
-      {media && <div>{media}</div>}
+      {media && media}
     </div>
   );
 }
