@@ -44,7 +44,7 @@ export default function PromotionalSales({
   const [startDate, setStartDate] = useState<Date>(new Date());
   return (
     <WidgetCard
-      title={'프로모션 세일기간'}
+      title={'순 이익'}
       action={
         <DatePicker
           selected={startDate}

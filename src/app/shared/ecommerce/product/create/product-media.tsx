@@ -109,7 +109,7 @@ export const MultipleFiles = ({
                 설명
               </div>
               <div className="w-28 px-4 py-3.5 text-center text-sm font-semibold text-gray-700 @2xl:py-5">
-                대표이미지
+                썸네일 이미지
               </div>
               <div className="w-20 shrink-0 px-4 py-3.5 text-center text-sm font-semibold text-gray-700 @2xl:py-5">
                 삭제

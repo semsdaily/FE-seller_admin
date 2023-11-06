@@ -52,13 +52,13 @@ export default function ProductSummary({ className }: { className?: string }) {
             options={typeOption}
             value={value}
             onChange={onChange}
-            label="상품 타입"
+            label="대분류"
             error={errors?.type?.message as string}
             getOptionValue={(option) => option.name}
           />
         )}
       />
-
+      
       <Controller
         name="categories"
         control={control}
@@ -67,10 +67,11 @@ export default function ProductSummary({ className }: { className?: string }) {
             options={categoryOption}
             value={value}
             onChange={onChange}
-            label="카테고리"
+            label="중분류"
             error={errors?.categories?.message as string}
             getOptionValue={(option) => option.name}
           />
+          
         )}
       />
 
