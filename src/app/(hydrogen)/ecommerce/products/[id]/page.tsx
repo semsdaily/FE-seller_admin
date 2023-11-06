@@ -4,15 +4,15 @@ import ProductDetails from '@/app/shared/ecommerce/product/product-details';
 
 export default function ProductDetailsPage({ params }: any) {
   const pageHeader = {
-    title: 'Shop',
+    title: '상품상세',
     breadcrumb: [
       {
         href: routes.eCommerce.dashboard,
-        name: 'E-Commerce',
+        name: 'Home',
       },
       {
         href: routes.eCommerce.shop,
-        name: 'Shop',
+        name: 'product',
       },
       {
         name: params.id,

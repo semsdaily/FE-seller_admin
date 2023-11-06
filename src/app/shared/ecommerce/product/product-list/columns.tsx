@@ -152,7 +152,7 @@ export const getColumns = ({
     ),
   },
   {
-    title: <HeaderCell title="Product" />,
+    title: <HeaderCell title="상품" />,
     dataIndex: 'product',
     key: 'product',
     width: 300,
@@ -171,7 +171,7 @@ export const getColumns = ({
     ),
   },
   {
-    title: <HeaderCell title="SKU" />,
+    title: <HeaderCell title="상품 ID" />,
     dataIndex: 'sku',
     key: 'sku',
     width: 150,
@@ -180,7 +180,7 @@ export const getColumns = ({
   {
     title: (
       <HeaderCell
-        title="Stock"
+        title="재고"
         sortable
         ascending={
           sortConfig?.direction === 'asc' && sortConfig?.key === 'stock'
@@ -196,7 +196,7 @@ export const getColumns = ({
   {
     title: (
       <HeaderCell
-        title="Price"
+        title="가격"
         sortable
         ascending={
           sortConfig?.direction === 'asc' && sortConfig?.key === 'price'
@@ -212,14 +212,14 @@ export const getColumns = ({
     ),
   },
   {
-    title: <HeaderCell title="Rating" />,
+    title: <HeaderCell title="별점" />,
     dataIndex: 'rating',
     key: 'rating',
     width: 200,
     render: (rating: number[]) => getRating(rating),
   },
   {
-    title: <HeaderCell title="Status" />,
+    title: <HeaderCell title="상태" />,
     dataIndex: 'status',
     key: 'status',
     width: 120,

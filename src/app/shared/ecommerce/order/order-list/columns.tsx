@@ -59,14 +59,14 @@ export const getColumns = ({
   onHeaderCellClick,
 }: Columns) => [
   {
-    title: <HeaderCell title="Order ID" />,
+    title: <HeaderCell title="주문 ID" />,
     dataIndex: 'id',
     key: 'id',
     width: 90,
     render: (value: string) => <Text>#{value}</Text>,
   },
   {
-    title: <HeaderCell title="Customer" />,
+    title: <HeaderCell title="주문고객" />,
     dataIndex: 'customer',
     key: 'customer',
     width: 300,
@@ -80,7 +80,7 @@ export const getColumns = ({
     ),
   },
   {
-    title: <HeaderCell title="Items" />,
+    title: <HeaderCell title="상품 ID" />,
     dataIndex: 'items',
     key: 'items',
     width: 150,
@@ -91,7 +91,7 @@ export const getColumns = ({
   {
     title: (
       <HeaderCell
-        title="Price"
+        title="가격"
         sortable
         ascending={
           sortConfig?.direction === 'asc' && sortConfig?.key === 'price'
@@ -109,7 +109,7 @@ export const getColumns = ({
   {
     title: (
       <HeaderCell
-        title="Created"
+        title="주문날짜"
         sortable
         ascending={
           sortConfig?.direction === 'asc' && sortConfig?.key === 'createdAt'
@@ -125,7 +125,7 @@ export const getColumns = ({
   {
     title: (
       <HeaderCell
-        title="Modified"
+        title="배송날짜"
         sortable
         ascending={
           sortConfig?.direction === 'asc' && sortConfig?.key === 'updatedAt'
@@ -139,7 +139,7 @@ export const getColumns = ({
     render: (value: Date) => <DateCell date={value} />,
   },
   {
-    title: <HeaderCell title="Status" />,
+    title: <HeaderCell title="상태" />,
     dataIndex: 'status',
     key: 'status',
     width: 140,

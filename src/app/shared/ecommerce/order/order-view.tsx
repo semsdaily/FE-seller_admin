@@ -80,29 +80,26 @@ export default function OrderView() {
     <>
       <div className="flex flex-wrap justify-center border-b border-t border-gray-300 py-4 font-medium text-gray-700 @5xl:justify-start">
         <span className="my-2 border-r border-gray-200 px-5 py-0.5 first:ps-0 last:border-r-0">
-          October 22, 2022 at 10:30 pm
+          주문일자
         </span>
         <span className="my-2 border-r border-gray-200 px-5 py-0.5 first:ps-0 last:border-r-0">
-          7 Items
+          상품갯수
         </span>
         <span className="my-2 border-r border-gray-200 px-5 py-0.5 first:ps-0 last:border-r-0">
-          Total $1234.00
+          총 금액
         </span>
         <span className="my-2 ms-5 rounded-3xl border-r border-gray-200 bg-green-lighter px-2.5 py-1 text-xs text-green-dark first:ps-0 last:border-r-0">
-          Paid
+          지불완/미완
         </span>
       </div>
       <div className="items-start pt-10 @5xl:grid @5xl:grid-cols-12 @5xl:gap-7 @6xl:grid-cols-10 @7xl:gap-10">
         <div className="space-y-7 @5xl:col-span-8 @5xl:space-y-10 @6xl:col-span-7">
           <div className="">
             <span className="mb-1.5 block text-sm font-medium text-gray-700">
-              Notes About Order
+              주문 요청사항
             </span>
             <div className="min-h-[120px] rounded-xl border border-gray-200 px-5 pt-3 text-sm leading-[1.85]">
-              Hi James, I just noticed you’ve been with redq.io for 2 years.
-              Thank you for trusting in us. I hope we keep meeting your
-              expectations. We’ve recently restocked our tees, sending one
-              along. Hope you like it
+              order requested term data
             </div>
           </div>
           <div className="pb-5">

@@ -7,7 +7,7 @@ import PageHeader from '@/app/shared/page-header';
 import { PiDownloadSimpleBold, PiPrinterBold } from 'react-icons/pi';
 
 const pageHeader = {
-  title: 'Invoice Details',
+  title: '수수료 상세',
   breadcrumb: [
     {
       href: routes.eCommerce.dashboard,
@@ -15,10 +15,10 @@ const pageHeader = {
     },
     {
       href: routes.invoice.home,
-      name: 'Invoice',
+      name: '수수료',
     },
     {
-      name: 'Details',
+      name: '상세보기',
     },
   ],
 };
@@ -38,11 +38,11 @@ export default function InvoiceDetailsPage({ params }: any) {
             className="w-full @lg:w-auto"
           >
             <PiPrinterBold className="me-1.5 h-[17px] w-[17px]" />
-            Print
+            내역인쇄하기
           </Button>
           <Button className="w-full @lg:w-auto dark:bg-gray-100 dark:text-white dark:active:bg-gray-100">
             <PiDownloadSimpleBold className="me-1.5 h-[17px] w-[17px]" />
-            Download
+            다운로드
           </Button>
         </div>
       </PageHeader>

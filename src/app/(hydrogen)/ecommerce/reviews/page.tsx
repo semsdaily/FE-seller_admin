@@ -6,18 +6,18 @@ import PageHeader from '@/app/shared/page-header';
 import ReviewsTable from '@/app/shared/ecommerce/review/table';
 
 const pageHeader = {
-  title: 'Reviews',
+  title: '후기',
   breadcrumb: [
     {
       href: routes.eCommerce.dashboard,
-      name: 'E-Commerce',
+      name: 'Home',
     },
     {
       href: routes.eCommerce.reviews,
-      name: 'Reviews',
+      name: '후기',
     },
     {
-      name: 'List',
+      name: '목록',
     },
   ],
 };

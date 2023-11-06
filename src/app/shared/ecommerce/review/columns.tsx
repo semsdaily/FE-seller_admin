@@ -70,14 +70,14 @@ export const getColumns = ({
     ),
   },
   {
-    title: <HeaderCell title="ID" />,
+    title: <HeaderCell title="리뷰ID" />,
     dataIndex: 'id',
     key: 'id',
     width: 150,
     render: (id: any) => <Text className="text-sm text-gray-500">RW-{id}</Text>,
   },
   {
-    title: <HeaderCell title="Customer Review" />,
+    title: <HeaderCell title="고객리뷰" />,
     dataIndex: 'customer',
     key: 'customer',
     width: 350,
@@ -98,7 +98,7 @@ export const getColumns = ({
   {
     title: (
       <HeaderCell
-        title="Rating"
+        title="평점"
         sortable
         ascending={
           sortConfig?.direction === 'asc' && sortConfig?.key === 'rating'
@@ -117,7 +117,7 @@ export const getColumns = ({
     ),
   },
   {
-    title: <HeaderCell title="Product" />,
+    title: <HeaderCell title="상품" />,
     dataIndex: 'product',
     key: 'product',
     width: 300,
@@ -145,7 +145,7 @@ export const getColumns = ({
   {
     title: (
       <HeaderCell
-        title="Created"
+        title="날짜"
         sortable
         ascending={
           sortConfig?.direction === 'asc' && sortConfig?.key === 'createdAt'
@@ -159,7 +159,7 @@ export const getColumns = ({
     render: (value: Date) => <DateCell date={value} />,
   },
   {
-    title: <HeaderCell title="Status" />,
+    title: <HeaderCell title="상태" />,
     dataIndex: 'status',
     key: 'status',
     width: 120,

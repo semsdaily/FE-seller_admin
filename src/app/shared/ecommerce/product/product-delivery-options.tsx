@@ -68,7 +68,7 @@ export default function ProductDeliveryOptions() {
           onClick={toggle}
           className="flex w-full cursor-pointer items-center justify-between py-6 font-lexend text-lg font-semibold text-gray-900"
         >
-          Delivery Options
+          배송요청사항
           <div className="flex shrink-0 items-center justify-center">
             <PiCaretDownBold
               className={cn(
@@ -84,15 +84,15 @@ export default function ProductDeliveryOptions() {
         <div className="mb-5">
           <CheckDelivery />
         </div>
-        <Text className="mb-3 last:mb-0">100% Original Products</Text>
+        <Text className="mb-3 last:mb-0">상품 상세설명</Text>
         <Text className="mb-3 last:mb-0">
-          Pay on delivery might be available
+          ~~~~~~~~~
         </Text>
         <Text className="mb-3 last:mb-0">
-          Easy 14 days returns and exchanges
+          ~~~~~~~~~~~~~~~
         </Text>
         <Text className="mb-3 last:mb-0">
-          Try & Buy might be available for some products
+          ~~~~~~~~~~~~~~~~~~~~~~
         </Text>
       </div>
     </Collapse>

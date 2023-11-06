@@ -39,7 +39,6 @@ export default function CreateProductPage() {
           </Button>
         </Link>
       </PageHeader>
-
       <CreateProduct />
     </>
   );

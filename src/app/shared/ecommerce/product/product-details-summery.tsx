@@ -113,7 +113,7 @@ function WishlistButton({ className }: { className?: string }) {
           d="M11.25 7C8.35 7 6 9.244 6 12.012c0 2.234.919 7.538 9.962 12.9a1.063 1.063 0 0 0 1.076 0C26.08 19.55 27 14.246 27 12.011 27 9.244 24.649 7 21.75 7c-2.9 0-5.25 3.037-5.25 3.037S14.149 7 11.25 7Z"
         />
       </svg>
-      Wishlist
+      찜하기
     </Button>
   );
 }
@@ -129,7 +129,7 @@ function AddToCartButton() {
       className="h-12 text-sm dark:bg-gray-100 dark:text-white dark:active:bg-gray-100 lg:h-14 lg:text-base"
     >
       <PiShoppingCartSimple className="me-2 h-5 w-5 lg:h-[22px] lg:w-[22px]" />{' '}
-      Add To Cart
+      장바구니
     </Button>
   );
 }
@@ -139,27 +139,27 @@ export default function ProductDetailsSummery() {
     <>
       <div className="border-b border-gray-200 pb-6 @lg:pb-8">
         <Title as="h2" className="mb-2.5 font-bold @6xl:text-4xl">
-          Nike
+          상품이름
         </Title>
         <Text as="p" className="text-base">
-          Men’s Shoes
+          상품 카테고리
         </Text>
       </div>
       <div className="pb-8 pt-5">
         <div className="mb-1.5 mt-2 flex items-end font-lexend text-base">
           <div className="-mb-0.5 text-2xl font-semibold text-gray-900 lg:text-3xl">
-            $125
+            상품가격
           </div>
           <del className="ps-1.5 font-medium text-gray-500">$220</del>
           <div className="ps-1.5 text-red">(25% OFF)</div>
         </div>
         <div className="font-medium text-green-dark">
-          Inclusive of all taxes
+          부가세 포함
         </div>
 
         <div className="mb-3.5 flex items-start justify-between pt-6">
           <Title as="h6" className="font-inter text-sm font-medium">
-            Select Size
+            상품 사이즈
           </Title>
           <Button size="sm" variant="text" className="h-auto py-0 underline">
             Size Guide
@@ -168,7 +168,7 @@ export default function ProductDetailsSummery() {
         {sizes?.length ? <GetSize sizes={sizes} /> : null}
 
         <Title as="h6" className="mb-3.5 mt-6 font-inter text-sm font-medium">
-          Select Color
+          색상선택
         </Title>
         {colors?.length ? <GetColor colors={colors} /> : null}
 

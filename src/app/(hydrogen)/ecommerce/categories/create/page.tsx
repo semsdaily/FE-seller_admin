@@ -5,18 +5,18 @@ import { routes } from '@/config/routes';
 import Link from 'next/link';
 
 const pageHeader = {
-  title: 'Create A Category',
+  title: '카테고리 등록',
   breadcrumb: [
     {
       href: routes.eCommerce.dashboard,
-      name: 'E-Commerce',
+      name: 'Home',
     },
     {
       href: routes.eCommerce.categories,
-      name: 'Categories',
+      name: '카테고리',
     },
     {
-      name: 'Create',
+      name: '등록',
     },
   ],
 };

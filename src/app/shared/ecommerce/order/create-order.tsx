@@ -340,7 +340,7 @@ export default function CreateOrder({
                       as="p"
                       className="mt-3 flex flex-col font-semibold text-gray-700"
                     >
-                      <span className="mb-2 font-normal">Order ID</span>{' '}
+                      <span className="mb-2 font-normal">주문자 ID</span>{' '}
                       COMP1502
                     </Text>
                   </div>
