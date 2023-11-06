@@ -21,7 +21,6 @@ import PricingInventory from '@/app/shared/ecommerce/product/create/pricing-inve
 import ProductIdentifiers from '@/app/shared/ecommerce/product/create/product-identifiers';
 import ShippingInfo from '@/app/shared/ecommerce/product/create/shipping-info';
 import ProductSeo from '@/app/shared/ecommerce/product/create/product-seo';
-import DeliveryEvent from '@/app/shared/ecommerce/product/create/delivery-event';
 import ProductVariants from '@/app/shared/ecommerce/product/create/product-variants';
 import ProductTaxonomies from '@/app/shared/ecommerce/product/create/product-tags';
 import FormFooter from '@/components/form-footer';

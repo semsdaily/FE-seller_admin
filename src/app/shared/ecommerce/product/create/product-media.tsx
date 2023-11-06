@@ -26,13 +26,22 @@ export default function ProductMedia({ className }: ProductMediaProps) {
     console.log(control);
   },[])
   return (
+    <div>
     <FormGroup
-      title="이미지"
-      description="대표이미지, 상세이미지, 세부내용을 업로드해주세요"
+      title="썸네일 이미지"
+      description="대표이미지, 썸네일 이미지를 업로드해주세요"
       className={cn(className)}
     >
       <MultipleFiles className="col-span-2" label="Images" />
     </FormGroup>
+    <FormGroup
+    title="상품설명 이미지"
+    description="상품설명 이미지를 업로드해주세요"
+    className={cn(className)}
+  >
+    <MultipleFiles className="col-span-2" label="Images" />
+  </FormGroup>
+    </div>
   );
 }
 
