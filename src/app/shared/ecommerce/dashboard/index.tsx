@@ -13,30 +13,33 @@ import PromotionalSales from '@/app/shared/ecommerce/dashboard/promotional-sales
 import RecentOrder from '@/app/shared/ecommerce/dashboard/recent-order';
 import StockReport from '@/app/shared/ecommerce/dashboard/stock-report';
 import { PiPlusBold } from 'react-icons/pi';
-import welcomeImg from '@public/shop-illustration.png';
+import welcomeImg01 from '@public/assets/images/gentledog_cover01.png';
+import welcomeImg02 from '@public/assets/images/gentledog_cover02.png';
+
 import HandWaveIcon from '@/components/icons/hand-wave';
 
 export default function EcommerceDashboard() {
   return (
-    <div className="@container">
+    <div className="@container pt-20">
       <div className="grid grid-cols-1 gap-6 @4xl:grid-cols-2 @7xl:grid-cols-12 3xl:gap-8">
         <WelcomeBanner
-          title={
+          title={  
             <>
-              Good Morning, <br /> Cameron{' '}
-              <HandWaveIcon className="inline-flex h-8 w-8" />
+              판매자관리 <br /> 페이지{' '}
             </>
           }
           description={
-            'Here’s What happening on your store today. See the statistics at once.'
+            'GentleDog에 입점한 벤더사분들의 상점 관리 페이지입니다.'
           }
           media={
-            <div className="absolute -bottom-6 end-4 hidden w-[300px] @2xl:block lg:w-[320px] 2xl:-bottom-7 2xl:w-[330px]">
-              <div className="relative">
+            <div className="absolute -bottom-7 end-6 hidden w-[150px] h-auto @2xl:block lg:w-[200px] 2xl:-bottom-5 2xl:w-[200px] dog_view" style={{zIndex: "100"}}>
+              <div className="relative mix-blend-multiply brightness-105">
                 <Image
-                  src={welcomeImg}
+                  src={Math.floor(Math.random() * 2) ? welcomeImg01 : welcomeImg02}
+                  width={300}
+                  height={300}
+                  priority
                   alt="Welcome shop image form freepik"
-                  className="dark:brightness-95 dark:drop-shadow-md"
                 />
               </div>
             </div>
@@ -61,15 +64,15 @@ export default function EcommerceDashboard() {
 
         <PromotionalSales className="@4xl:col-start-2 @4xl:row-start-3 @7xl:col-span-4 @7xl:col-start-auto @7xl:row-start-auto" />
 
-        <RecentOrder className="relative @4xl:col-span-2 @7xl:col-span-12" />
+        {/* <RecentOrder className="relative @4xl:col-span-2 @7xl:col-span-12" /> */}
 
-        <RepeatCustomerRate className="@4xl:col-span-2 @7xl:col-span-12 @[90rem]:col-span-8" />
+        {/* <RepeatCustomerRate className="@4xl:col-span-2 @7xl:col-span-12 @[90rem]:col-span-8" /> */}
 
-        <BestSellers className="@7xl:col-span-6 @[90rem]:col-span-4" />
+        {/* <BestSellers className="@7xl:col-span-6 @[90rem]:col-span-4" /> */}
 
-        <UserLocation className="@7xl:col-span-6 @[90rem]:col-span-5 @[112rem]:col-span-4" />
+        {/* <UserLocation className="@7xl:col-span-6 @[90rem]:col-span-5 @[112rem]:col-span-4" /> */}
 
-        <StockReport className="@4xl:col-span-2 @7xl:col-span-12 @[90rem]:col-span-7 @[112rem]:col-span-8" />
+        {/* <StockReport className="@4xl:col-span-2 @7xl:col-span-12 @[90rem]:col-span-7 @[112rem]:col-span-8" /> */}
       </div>
     </div>
   );

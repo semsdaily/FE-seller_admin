@@ -6,15 +6,15 @@ import { Input } from '@/components/ui/input';
 const options = [
   {
     value: 'yes',
-    label: 'Track inventory for this product',
+    label: '재고 파악함',
   },
   {
     value: 'no',
-    label: 'Do not track inventory for this product',
+    label: '재고 파악 안 함',
   },
   {
     value: 'by-options',
-    label: 'Track inventory by options',
+    label: '카테고리별로 재고 파악',
   },
 ];
 
@@ -50,14 +50,14 @@ export default function InventoryTracing() {
 
       <Input
         type="number"
-        label="Current Stock Level"
+        label="현재 재고 수준"
         placeholder="150"
         {...register('currentStock')}
         error={errors.currentStock?.message as string}
       />
       <Input
         type="number"
-        label="Low Stock Level"
+        label="최소 재고 수준"
         placeholder="20"
         {...register('lowStock')}
         error={errors.lowStock?.message as string}

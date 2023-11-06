@@ -12,8 +12,8 @@ export default function ProductTags({ className }: { className?: string }) {
   const [tags, setTags] = useState<string[]>([]);
   return (
     <FormGroup
-      title="Product Tags"
-      description="Add your product's tag or category here"
+      title="상품 키워드"
+      description="상품 키워드를 입력해주세요"
       className={cn(className)}
     >
       <ItemCrud name="Tag" items={tags} setItems={setTags} />

@@ -6,7 +6,7 @@ import { PiCheckCircleFill } from 'react-icons/pi';
 const availability = [
   {
     value: 'online',
-    name: 'Only available online.',
+    name: '판매중',
   },
   {
     value: 'coming-soon',
@@ -14,7 +14,7 @@ const availability = [
   },
   {
     value: 'offline',
-    name: 'Only available offline.',
+    name: '품절',
   },
 ];
 

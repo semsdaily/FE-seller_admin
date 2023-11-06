@@ -23,8 +23,8 @@ export default function FileDashboard() {
 
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 2xl:gap-8">
         <div className="flex flex-col gap-6 lg:col-span-8 2xl:gap-8 3xl:col-span-9">
-          <QuickAccess />
-          <RecentFiles />
+          {/* <QuickAccess /> */}
+          {/* <RecentFiles /> */}
           <ActivityReport />
           <FileListTable data={allFilesData} />
         </div>

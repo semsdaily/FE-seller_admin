@@ -38,8 +38,8 @@ export default function ProductVariants({ className }: { className?: string }) {
 
   return (
     <FormGroup
-      title="Variant Options"
-      description="Add your product variants here"
+      title="옵션"
+      description="옵션을 추가하세요"
       className={cn(className)}
     >
       {fields.map((item, index) => (
@@ -52,7 +52,7 @@ export default function ProductVariants({ className }: { className?: string }) {
                 options={variantOption}
                 value={value}
                 onChange={onChange}
-                label="Variant Name"
+                label="옵션선택"
                 className="w-full @2xl:w-auto @2xl:flex-grow"
                 getOptionValue={(option) => option.name}
               />
@@ -60,10 +60,10 @@ export default function ProductVariants({ className }: { className?: string }) {
           />
           <Input
             type="number"
-            label="Variant Value"
+            label="옵션값"
             placeholder="150.00"
             className="flex-grow"
-            prefix={'$'}
+            prefix={'색상'}
             {...register(`productVariants.${index}.value`)}
           />
           {fields.length > 1 && (

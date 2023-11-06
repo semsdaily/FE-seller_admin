@@ -991,3 +991,22 @@ div[style='z-index: 1000001;'],
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+
+/* main_banner animation */
+
+.dog_view {
+  animation: dog_view 0.5s ease-in-out 0s 1 normal forwards running;
+}
+
+
+@keyframes dog_view {
+  0% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}

@@ -26,13 +26,22 @@ export default function ProductMedia({ className }: ProductMediaProps) {
     console.log(control);
   },[])
   return (
+    <div>
     <FormGroup
-      title="Upload new product images"
-      description="Upload your product image gallery here"
+      title="썸네일 이미지"
+      description="대표이미지, 썸네일 이미지를 업로드해주세요"
       className={cn(className)}
     >
       <MultipleFiles className="col-span-2" label="Images" />
     </FormGroup>
+    <FormGroup
+    title="상품설명 이미지"
+    description="상품설명 이미지를 업로드해주세요"
+    className={cn(className)}
+  >
+    <MultipleFiles className="col-span-2" label="Images" />
+  </FormGroup>
+    </div>
   );
 }
 
@@ -95,8 +104,7 @@ export const MultipleFiles = ({
         onChange={handleMultiImageUpload}
       />
       <p className="pt-3 text-sm text-gray-500">
-        Upload your product featured image here. Image size should not be more
-        than <strong className="font-medium text-gray-900">2 MB</strong>
+        사진을 올려주세요<strong className="font-medium text-gray-900">2 MB까지 지원합니다</strong>
       </p>
 
       {multiImages.length > 0 && (
@@ -104,16 +112,16 @@ export const MultipleFiles = ({
           <div className="min-w-[600px] pb-5 @xl:pb-0">
             <div className="mt-7 flex items-center rounded-md border border-gray-300 @2xl:mt-10">
               <div className="w-[20%] px-4 py-3.5 text-center text-sm font-semibold text-gray-700 @2xl:py-5">
-                Image
+                이미지
               </div>
               <div className="w-[55%] px-4 py-3.5 text-sm font-semibold text-gray-700 @2xl:py-5">
-                Description
+                설명
               </div>
               <div className="w-28 px-4 py-3.5 text-center text-sm font-semibold text-gray-700 @2xl:py-5">
-                Thumbnail
+                썸네일 이미지
               </div>
               <div className="w-20 shrink-0 px-4 py-3.5 text-center text-sm font-semibold text-gray-700 @2xl:py-5">
-                Delete
+                삭제
               </div>
             </div>
             <div className="mt-7 flex flex-row flex-wrap gap-5">
@@ -132,8 +140,8 @@ export const MultipleFiles = ({
                   </div>
                   <div className="w-[55%] px-4">
                     <Input
-                      label="Product Description"
-                      placeholder="Write product description here..."
+                      label="상품 상세설명"
+                      placeholder="상품상세 설명을 적어주세요"
                       // {...register('title')}
                       // error={errors.title?.message}
                     />

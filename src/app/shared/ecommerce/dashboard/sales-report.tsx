@@ -89,15 +89,15 @@ export default function SalesReport({ className }: { className?: string }) {
   const [startDate, setStartDate] = useState<Date>(new Date());
   return (
     <WidgetCard
-      title={'Sales Report'}
+      title={'매출이익'}
       description={
         <>
-          <Badge renderAsDot className="me-0.5 bg-[#282ECA]" /> Revenue
+          <Badge renderAsDot className="me-0.5 bg-[#282ECA]" /> 이익
           <Badge
             renderAsDot
             className="me-0.5 ms-4 bg-[#B8C3E9] dark:bg-[#7c88b2]"
           />{' '}
-          Expense
+          매출
         </>
       }
       descriptionClassName="text-gray-500 mt-1.5"

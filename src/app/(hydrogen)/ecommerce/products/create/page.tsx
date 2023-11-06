@@ -6,18 +6,18 @@ import PageHeader from '@/app/shared/page-header';
 import CreateProduct from '@/app/shared/ecommerce/product/create';
 
 const pageHeader = {
-  title: 'Create Product',
+  title: '상품등록',
   breadcrumb: [
     {
       href: routes.eCommerce.dashboard,
-      name: 'E-Commerce',
+      name: 'Home',
     },
     {
       href: routes.eCommerce.products,
-      name: 'Products',
+      name: '상품조회',
     },
     {
-      name: 'Create',
+      name: '등록',
     },
   ],
 };

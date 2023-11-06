@@ -14,22 +14,22 @@ import { useMedia } from '@/hooks/use-media';
 
 const data = [
   {
-    name: 'Youtube',
+    name: '대형견',
     sales: 31.47,
     fill: '#FF0000',
   },
   {
-    name: 'Instagram',
+    name: '중형견',
     sales: 26.69,
     fill: '#E1306C',
   },
   {
-    name: 'Twitter',
+    name: '소형견',
     sales: 15.69,
     fill: '#1DA1F2',
   },
   {
-    name: 'Facebook',
+    name: '핸드 메이드',
     sales: 8.22,
     fill: '#4267B2',
   },
@@ -44,7 +44,7 @@ export default function PromotionalSales({
   const [startDate, setStartDate] = useState<Date>(new Date());
   return (
     <WidgetCard
-      title={'Promotional Sales'}
+      title={'순 이익'}
       action={
         <DatePicker
           selected={startDate}

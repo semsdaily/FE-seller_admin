@@ -42,11 +42,7 @@ import {
 export const menuItems = [
   // label start
   {
-    name: 'Home',
-  },
-  // label end
-  {
-    name: 'E-Commerce',
+    name: 'Dashboard',
     href: '#',
     icon: <PiShoppingCartDuotone />,
     dropdownItems: [

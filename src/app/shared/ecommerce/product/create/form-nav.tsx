@@ -1,6 +1,7 @@
 import { Link } from 'react-scroll';
 import cn from '@/utils/class-names';
 import SimpleBar from '@/components/ui/simplebar';
+import DeliveryEvent from './delivery-event';
 
 export const formParts = {
   summary: 'summary',
@@ -16,32 +17,49 @@ export const formParts = {
 
 export const menuItems = [
   {
-    label: 'Summary',
+    id: 1,
+    label: '필수정보',
     value: formParts.summary,
   },
   {
-    label: 'Images & Gallery',
+    id: 2,
+    label: '이미지',
     value: formParts.media,
   },
   {
-    label: 'Pricing & Inventory',
+    id: 3,
+    label: '가격/할인',
     value: formParts.pricingInventory,
   },
   {
-    label: 'Product Identifiers & Custom Fields',
+    id: 4,
+    label: '상품code',
     value: formParts.productIdentifiers,
   },
   {
-    label: 'Shipping',
+    id: 5,
+    label: '배송정보',
     value: formParts.shipping,
   },
+  // {
+  //   id: 6,
+  //   label: '검색엔진최적화',
+  //   value: formParts.seo,
+  // },
+  // {
+  //   id: 7,
+  //   label: 'delivery event',
+  //   value: formParts.deliveryEvent,
+  // },
   {
-    label: 'SEO',
-    value: formParts.seo,
+    id: 6,
+    label: '옵션',
+    value: formParts.variantOptions,
   },
   {
-    label: 'Variant Options',
-    value: formParts.variantOptions,
+    id: 7,
+    label: '상품키워드',
+    value: formParts.tagsAndCategory,
   },
 ];
 
@@ -59,14 +77,14 @@ export default function FormNav({ className }: FormNavProps) {
     >
       <SimpleBar>
         <div className="inline-grid grid-flow-col gap-5 md:gap-7 lg:gap-10">
-          {menuItems.map((tab, idx) => (
+          {menuItems.map((tab) => (
             <Link
               key={tab.value}
               to={tab.value}
               spy={true}
               hashSpy={true}
               smooth={true}
-              offset={idx === 0 ? -250 : -150}
+              offset={tab.id === 0 ? -250 : -150}
               duration={500}
               className="relative cursor-pointer whitespace-nowrap py-4 hover:text-gray-1000"
               activeClass="active before:absolute before:bottom-0 before:left-0 before:z-[1] before:h-0.5 before:w-full before:bg-gray-1000 font-semibold text-gray-1000"

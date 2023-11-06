@@ -10,32 +10,16 @@ export default function ProductPricing() {
   return (
     <>
       <Input
-        label="Price"
-        placeholder="10"
+        label="소비자가격"
+        placeholder="ex.10"
         {...register('price')}
         error={errors.price?.message as string}
         prefix={'$'}
         type="number"
       />
       <Input
-        label="Cost Price"
-        placeholder="15"
-        {...register('costPrice')}
-        error={errors.costPrice?.message as string}
-        prefix={'$'}
-        type="number"
-      />
-      <Input
-        label="Retail Price"
-        placeholder="10"
-        {...register('retailPrice')}
-        error={errors.retailPrice?.message as string}
-        prefix={'$'}
-        type="number"
-      />
-      <Input
-        label="Sale Price"
-        placeholder="20"
+        label="할인가격"
+        placeholder="ex.20"
         {...register('salePrice')}
         error={errors.salePrice?.message as string}
         prefix={'$'}

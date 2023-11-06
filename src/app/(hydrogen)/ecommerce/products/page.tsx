@@ -10,18 +10,18 @@ import { productsData } from '@/data/products-data';
 import { exportToCSV } from '@/utils/export-to-csv';
 
 const pageHeader = {
-  title: 'Products',
+  title: '상품목록',
   breadcrumb: [
     {
       href: routes.eCommerce.dashboard,
-      name: 'E-Commerce',
+      name: 'Home',
     },
     {
       href: routes.eCommerce.products,
-      name: 'Products',
+      name: '상품조회',
     },
     {
-      name: 'List',
+      name: '등록',
     },
   ],
 };
@@ -30,7 +30,7 @@ export default function ProductsPage() {
   function handleExportData() {
     exportToCSV(
       productsData,
-      'ID,Name,Category,Product Thumbnail,SKU,Stock,Price,Status,Rating',
+      'loginId, count, product_name, price, product_code, img_url, brand_name, brand_logo_url, main_img_used, thumbnail_img_used, discount, discount_type, parent_category, category_name, color, size,',
       'product_data'
     );
   }
@@ -61,7 +61,6 @@ export default function ProductsPage() {
           </Link>
         </div>
       </PageHeader>
-
       <ProductsTable data={productsData} />
     </>
   );
