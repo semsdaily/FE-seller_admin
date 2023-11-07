@@ -20,7 +20,7 @@ export default function TopProductList() {
       <div className="grid grid-cols-1 gap-5">
         {topProductList.map((product) => (
           <div
-            key={.title + product.id}
+            key={product.title + product.id}
             className="flex items-start pe-2"
           >
             <div className="relative me-3 h-11 w-11 shrink-0 overflow-hidden rounded bg-gray-100">
