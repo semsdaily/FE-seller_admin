@@ -120,7 +120,7 @@ export default function InvoiceDetails() {
             rounded="md"
             className="mb-3 md:mb-2"
           >
-            Paid
+            지불
           </Badge>
           <Title as="h6">INV - #246098</Title>
           <Text className="mt-0.5 text-gray-500">Invoice Number</Text>

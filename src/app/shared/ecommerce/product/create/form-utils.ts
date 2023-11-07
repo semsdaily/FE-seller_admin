@@ -180,6 +180,44 @@ export const categoryOption = [
   },
 ];
 
+export const sizeOption = [
+  {
+    value: 'fruits',
+    name: '핑크',
+  },
+  {
+    value: 'grocery',
+    name: '노랑',
+  },
+  {
+    value: 'meat',
+    name: '초록',
+  },
+  {
+    value: 'cat food',
+    name: '파랑',
+  },
+];
+
+export const colorOption = [
+  {
+    value: 'fruits',
+    name: '핑크',
+  },
+  {
+    value: 'grocery',
+    name: '노랑',
+  },
+  {
+    value: 'meat',
+    name: '초록',
+  },
+  {
+    value: 'cat food',
+    name: '파랑',
+  },
+];
+
 // Type option
 export const typeOption = [
   {

@@ -6,15 +6,15 @@ import OrderView from '@/app/shared/ecommerce/order/order-view';
 
 export default function OrderDetailsPage({ params }: any) {
   const pageHeader = {
-    title: `Order #${params.id}`,
+    title: `주문상세 #${params.id}`,
     breadcrumb: [
       {
         href: routes.eCommerce.dashboard,
-        name: 'E-Commerce',
+        name: 'Home',
       },
       {
         href: routes.eCommerce.orders,
-        name: 'Orders',
+        name: '주문',
       },
       {
         name: params.id,
@@ -32,7 +32,7 @@ export default function OrderDetailsPage({ params }: any) {
             tag="span"
             className="w-full @lg:w-auto dark:bg-gray-100 dark:text-white dark:active:bg-gray-100"
           >
-            Edit Order
+            주문수정
           </Button>
         </Link>
       </PageHeader>

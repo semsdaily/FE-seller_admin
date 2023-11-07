@@ -6,18 +6,18 @@ import PageHeader from '@/app/shared/page-header';
 import CreateProduct from '@/app/shared/ecommerce/product/create';
 
 const pageHeader = {
-  title: 'Edit Product',
+  title: '상품수정',
   breadcrumb: [
     {
       href: routes.eCommerce.dashboard,
-      name: 'E-Commerce',
+      name: 'Home',
     },
     {
       href: routes.eCommerce.products,
-      name: 'Products',
+      name: '상품',
     },
     {
-      name: 'Edit',
+      name: '수정',
     },
   ],
 };
@@ -88,7 +88,7 @@ export default function EditProductPage({
             className="w-full @lg:w-auto dark:bg-gray-100 dark:text-white dark:active:bg-gray-100"
           >
             <PiPlusBold className="me-1.5 h-[17px] w-[17px]" />
-            Add Product
+            상품 수정
           </Button>
         </Link>
       </PageHeader>

@@ -1,12 +1,13 @@
 import { Link } from 'react-scroll';
 import cn from '@/utils/class-names';
 import SimpleBar from '@/components/ui/simplebar';
-import DeliveryEvent from './delivery-event';
+// import DeliveryEvent from './delivery-event';
 
 export const formParts = {
   summary: 'summary',
   media: 'media',
   pricingInventory: 'pricingInventory',
+  productImg: 'productImg',
   productIdentifiers: 'productIdentifiers',
   shipping: 'shipping',
   seo: 'seo',
@@ -18,12 +19,12 @@ export const formParts = {
 export const menuItems = [
   {
     id: 1,
-    label: '필수정보',
+    label: '상품정보',
     value: formParts.summary,
   },
   {
     id: 2,
-    label: '이미지',
+    label: '상품이미지',
     value: formParts.media,
   },
   {
@@ -33,9 +34,14 @@ export const menuItems = [
   },
   {
     id: 4,
-    label: '상품code',
-    value: formParts.productIdentifiers,
+    label: '상세이미지',
+    value: formParts.productImg,
   },
+  // {
+  //   id: 5,
+  //   label: '상품code',
+  //   value: formParts.productIdentifiers,
+  // },
   {
     id: 5,
     label: '배송정보',

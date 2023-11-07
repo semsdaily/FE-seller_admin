@@ -180,7 +180,7 @@ export default function SearchWidget({
           <PiMagnifyingGlassBold className="magnifying-glass me-2 h-[18px] w-[18px]" />
         )}
         <span className="placeholder-text hidden text-sm text-gray-600 group-hover:text-gray-900 xl:inline-flex">
-          Type what you are looking for...
+          검색어를 입력해주세요
         </span>
         <span className="search-command ms-auto hidden items-center text-sm text-gray-600 lg:flex lg:rounded-md lg:bg-gray-200/70 lg:px-1.5 lg:py-1 lg:text-xs lg:font-semibold xl:justify-normal">
           <PiCommand strokeWidth={1.3} className="h-[15px] w-[15px]" />K

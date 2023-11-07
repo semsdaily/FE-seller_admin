@@ -10,14 +10,14 @@ import ExportButton from '@/app/shared/export-button';
 import { PiPlusBold } from 'react-icons/pi';
 
 const pageHeader = {
-  title: 'All Shipments',
+  title: '배송관리',
   breadcrumb: [
     {
       href: routes.eCommerce.dashboard,
-      name: 'Dashboard',
+      name: 'Home',
     },
     {
-      name: 'Shipment List',
+      name: '배송리스트',
     },
   ],
 };

@@ -5,10 +5,13 @@ import cn from '@/utils/class-names';
 import {
   categoryOption,
   typeOption,
+  colorOption,
+  sizeOption,
 } from '@/app/shared/ecommerce/product/create/form-utils';
 import dynamic from 'next/dynamic';
 import SelectLoader from '@/components/loader/select-loader';
 import QuillLoader from '@/components/loader/quill-loader';
+import { size } from 'lodash';
 const Select = dynamic(() => import('@/components/ui/select'), {
   ssr: false,
   loading: () => <SelectLoader />,
@@ -27,7 +30,7 @@ export default function ProductSummary({ className }: { className?: string }) {
 
   return (
     <FormGroup
-      title="필수정보"
+      title="상품 필수정보"
       description="필수정보는 꼭 입력해주셔야 상품이 등록됩니다."
       className={cn(className)}
     >
@@ -68,6 +71,37 @@ export default function ProductSummary({ className }: { className?: string }) {
             value={value}
             onChange={onChange}
             label="중분류"
+            error={errors?.categories?.message as string}
+            getOptionValue={(option) => option.name}
+          />
+          
+        )}
+      />
+
+      <Controller
+        name="color"
+        control={control}
+        render={({ field: { onChange, value } }) => (
+          <Select
+            options={colorOption}
+            value={value}
+            onChange={onChange}
+            label="색상"
+            error={errors?.type?.message as string}
+            getOptionValue={(option) => option.name}
+          />
+        )}
+      />
+      
+      <Controller
+        name="size"
+        control={control}
+        render={({ field: { onChange, value } }) => (
+          <Select
+            options={sizeOption}
+            value={value}
+            onChange={onChange}
+            label="사이즈"
             error={errors?.categories?.message as string}
             getOptionValue={(option) => option.name}
           />

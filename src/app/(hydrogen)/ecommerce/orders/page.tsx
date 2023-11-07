@@ -10,18 +10,18 @@ import { orderData } from '@/data/order-data';
 import { exportToCSV } from '@/utils/export-to-csv';
 
 const pageHeader = {
-  title: 'Orders',
+  title: '주문',
   breadcrumb: [
     {
       href: routes.eCommerce.dashboard,
-      name: 'E-Commerce',
+      name: 'Home',
     },
     {
       href: routes.eCommerce.orders,
-      name: 'Orders',
+      name: '주문',
     },
     {
-      name: 'List',
+      name: '목록',
     },
   ],
 };
@@ -30,7 +30,7 @@ export default function OrdersPage() {
   function handleExportData() {
     exportToCSV(
       orderData,
-      'Order ID,Name,Email,Avatar,Items,Price,Status,Created At,Updated At',
+      ',Name,Email,Avatar,Items,Price,Status,Created At,Updated At',
       'order_data'
     );
   }
@@ -45,7 +45,7 @@ export default function OrdersPage() {
             onClick={() => handleExportData()}
           >
             <PiArrowLineDownBold className="me-1.5 h-[17px] w-[17px]" />
-            Export
+            다운로드
           </Button>
           <Link
             href={routes.eCommerce.createProduct}
@@ -56,7 +56,7 @@ export default function OrdersPage() {
               className="w-full @lg:w-auto dark:bg-gray-100 dark:text-white dark:active:bg-gray-100"
             >
               <PiPlusBold className="me-1.5 h-[17px] w-[17px]" />
-              Add Order
+              새 주문
             </Button>
           </Link>
         </div>

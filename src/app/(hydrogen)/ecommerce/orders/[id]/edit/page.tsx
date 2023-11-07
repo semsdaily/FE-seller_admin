@@ -7,18 +7,18 @@ import CreateOrder from '@/app/shared/ecommerce/order/create-order';
 // TODO: Need added Order date default value
 
 const pageHeader = {
-  title: 'Edit Order',
+  title: '주문 수정',
   breadcrumb: [
     {
       href: routes.eCommerce.dashboard,
-      name: 'E-Commerce',
+      name: 'Home',
     },
     {
       href: routes.eCommerce.orders,
-      name: 'Orders',
+      name: '주문',
     },
     {
-      name: 'Edit',
+      name: '수정',
     },
   ],
 };

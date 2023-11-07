@@ -47,78 +47,78 @@ export const menuItems = [
     icon: <PiShoppingCartDuotone />,
     dropdownItems: [
       {
-        name: 'Products',
+        name: '상품',
         href: routes.eCommerce.products,
       },
       {
-        name: 'Product Details',
+        name: '상품상세',
         href: routes.eCommerce.productDetails(DUMMY_ID),
       },
       {
-        name: 'Create Product',
+        name: '상품등록',
         href: routes.eCommerce.createProduct,
       },
       {
-        name: 'Edit Product',
+        name: '상품수정',
         href: routes.eCommerce.ediProduct(DUMMY_ID),
       },
       {
-        name: 'Categories',
+        name: '카테고리',
         href: routes.eCommerce.categories,
       },
       {
-        name: 'Create Category',
+        name: '카테고리 추가',
         href: routes.eCommerce.createCategory,
       },
       {
-        name: 'Edit Category',
+        name: '카테고리 수정',
         href: routes.eCommerce.editCategory(DUMMY_ID),
       },
       {
-        name: 'Orders',
+        name: '주문',
         href: routes.eCommerce.orders,
       },
       {
-        name: 'Order Details',
+        name: '주문상세',
         href: routes.eCommerce.orderDetails(DUMMY_ID),
       },
+      // {
+      //   name: '주문등록#삭제예정',
+      //   href: routes.eCommerce.createOrder,
+      // },
       {
-        name: 'Create Order',
-        href: routes.eCommerce.createOrder,
-      },
-      {
-        name: 'Edit Order',
+        name: '주문수정',
         href: routes.eCommerce.editOrder(DUMMY_ID),
       },
       {
-        name: 'Reviews',
+        name: '리뷰',
         href: routes.eCommerce.reviews,
       },
-      {
-        name: 'Shop',
-        href: routes.eCommerce.shop,
-      },
-      {
-        name: 'Cart',
-        href: routes.eCommerce.cart,
-      },
-      {
-        name: 'Checkout & Payment',
-        href: routes.eCommerce.checkout,
-      },
+      // {
+      //   name: '삭제예정',
+      //   href: routes.eCommerce.shop,
+      // },
+      // {
+      //   name: '삭제예정',
+      //   href: routes.eCommerce.cart,
+      // },
+      // {
+      //   name: '삭제예정',
+      //   href: routes.eCommerce.checkout,
+      // },
     ],
   },
   {
-    name: 'Support',
+    name: 'CS 고객응대',
     href: '#',
     icon: <PiHeadsetDuotone />,
     dropdownItems: [
       {
-        name: 'Inbox',
+        name: '고객응대',
         href: routes.support.inbox,
       },
       {
-        name: 'Snippets',
+        name: 'FAQ',
         href: routes.support.snippets,
       },
       {
@@ -128,16 +128,16 @@ export const menuItems = [
     ],
   },
   {
-    name: 'Invoice',
+    name: '정산',
     href: '#',
     icon: <PiCurrencyDollarDuotone />,
     dropdownItems: [
       {
-        name: 'List',
+        name: '정산내역',
         href: routes.invoice.home,
       },
       {
-        name: 'Details',
+        name: '수수료 상세',
         href: routes.invoice.details(DUMMY_ID),
       },
       {
@@ -151,32 +151,32 @@ export const menuItems = [
     ],
   },
   {
-    name: 'Logistics',
+    name: '배송관리',
     href: '#',
     icon: <PiPackageDuotone />,
     dropdownItems: [
       {
-        name: 'Shipment List',
+        name: '배송관리',
         href: routes.logistics.shipmentList,
       },
       {
-        name: 'Shipment Details',
+        name: '배송내역',
         href: routes.logistics.shipmentDetails(DUMMY_ID),
       },
       {
-        name: 'Create Shipment',
+        name: '배송대기',
         href: routes.logistics.createShipment,
       },
       {
-        name: 'Edit Shipment',
+        name: '배송지수정',
         href: routes.logistics.editShipment(DUMMY_ID),
       },
       {
-        name: 'Customer Profile',
+        name: '교환/환불',
         href: routes.logistics.customerProfile,
       },
       {
-        name: 'Tracking',
+        name: '배송추적',
         href: routes.logistics.tracking(DUMMY_ID),
       },
     ],

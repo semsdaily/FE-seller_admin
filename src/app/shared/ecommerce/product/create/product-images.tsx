@@ -15,7 +15,7 @@ interface ProductMediaProps {
   className?: string;
 }
 
-export default function ProductMedia({ className }: ProductMediaProps) {
+export default function ProductImage({ className }: ProductMediaProps) {
   const {
     register,
     control,
@@ -28,8 +28,8 @@ export default function ProductMedia({ className }: ProductMediaProps) {
   return (
     <div>
     <FormGroup
-      title="상품 이미지"
-      description="대표이미지, 썸네일 이미지를 업로드해주세요"
+      title="상품상세이미지"
+      description="상세이미지를 업로드해주세요"
       className={cn(className)}
     >
       <MultipleFiles className="col-span-2" label="Images" />

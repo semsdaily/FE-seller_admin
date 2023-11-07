@@ -240,22 +240,23 @@ export default function CreateCategory({
               )}
             >
               <HorizontalFormBlockWrapper
-                title={'Add new category:'}
-                description={'Edit your category information from here'}
+                title={'새로운 카테고리 등록'}
+                description={'새로운 카테고리명을 등록해주세요'}
                 isModalView={isModalView}
               >
                 <Input
-                  label="Category Name"
+                  label="카테고리 이름"
                   placeholder="category name"
                   {...register('name')}
                   error={errors.name?.message}
                 />
-                <Input
+                {/* <Input
                   label="Slug"
                   placeholder="slug"
                   {...register('slug')}
                   error={errors.slug?.message}
-                />
+                /> */}
+                <div></div>
                 <Controller
                   name="parentCategory"
                   control={control}
@@ -264,7 +265,7 @@ export default function CreateCategory({
                       options={parentCategoryOption}
                       value={value}
                       onChange={onChange}
-                      label="Parent Category"
+                      label="대분류"
                       error={errors?.parentCategory?.message}
                       getOptionValue={(option) => option.name}
                     />
@@ -278,7 +279,7 @@ export default function CreateCategory({
                       options={typeOption}
                       value={value}
                       onChange={onChange}
-                      label="Display Type"
+                      label="소분류"
                       error={errors?.type?.message}
                       getOptionValue={(option) => option.name}
                     />
@@ -300,13 +301,13 @@ export default function CreateCategory({
                     )}
                   />
                 </div>
-              </HorizontalFormBlockWrapper>
+              {/* </HorizontalFormBlockWrapper>
               <HorizontalFormBlockWrapper
                 title="Upload new thumbnail image"
                 description="Upload your product image gallery here"
                 isModalView={isModalView}
-              >
-                <Controller
+              > */}
+                {/* <Controller
                   control={control}
                   name="image"
                   render={({ field: { onChange, ...rest } }) => (
@@ -315,9 +316,9 @@ export default function CreateCategory({
                       className="col-span-2"
                       label="Images"
                       onChange={onChange}
-                    />
-                  )}
-                />
+                    /> */}
+                  {/* )}
+                /> */}
               </HorizontalFormBlockWrapper>
             </div>
           </div>
@@ -329,14 +330,14 @@ export default function CreateCategory({
             )}
           >
             <Button variant="outline" className="w-full @xl:w-auto">
-              Save as Draft
+              저장
             </Button>
             <Button
               type="submit"
               isLoading={isLoading}
               className="w-full @xl:w-auto dark:bg-gray-100 dark:text-white dark:active:bg-gray-100"
             >
-              {id ? 'Update' : 'Create'} Category
+              {id ? '수정' : '등록'} 
             </Button>
           </div>
         </>

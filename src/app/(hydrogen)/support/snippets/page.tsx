@@ -6,7 +6,7 @@ import SnippetsTable from '@/app/shared/support/snippets/table';
 import HeaderAction from '../header-action';
 
 const pageHeader = {
-  title: 'Support Snippets',
+  title: ' FAQ',
   breadcrumb: [
     {
       href: routes.eCommerce.dashboard,
@@ -14,10 +14,10 @@ const pageHeader = {
     },
     {
       href: routes.support.dashboard,
-      name: 'Support',
+      name: 'FAQ',
     },
     {
-      name: 'Snippets',
+      name: 'List',
     },
   ],
 };

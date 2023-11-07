@@ -83,7 +83,7 @@ export default function SignUpForm() {
             <Input
               type="text"
               size="lg"
-              label="성"
+              label="브랜드 명"
               // placeholder="Enter your first name"
               className="[&>label>span]:font-medium"
               color="info"
@@ -94,7 +94,7 @@ export default function SignUpForm() {
             <Input
               type="text"
               size="lg"
-              label="이름"
+              label="공식홈페이지 주소"
               // placeholder="Enter your last name"
               className="[&>label>span]:font-medium"
               color="info"
@@ -103,10 +103,87 @@ export default function SignUpForm() {
               error={errors.lastName?.message}
             />
             <Input
+              type="text"
+              size="lg"
+              label="회사 상품소개 및 관련내용"
+              // placeholder="Enter your last name"
+              className="[&>label>span]:font-medium"
+              color="info"
+              inputClassName="text-sm"
+              {...register('lastName')}
+              error={errors.lastName?.message}
+            />
+            <Input
+              type="text"
+              size="lg"
+              label="회사명"
+              // placeholder="Enter your last name"
+              className="[&>label>span]:font-medium"
+              color="info"
+              inputClassName="text-sm"
+              {...register('lastName')}
+              error={errors.lastName?.message}
+            />
+            <Input
+              type="text"
+              size="lg"
+              label="사업자 등록번호"
+              className="[&>label>span]:font-medium"
+              inputClassName="text-sm"
+              color="info"
+              placeholder="Enter your pin"
+              {...register('email')}
+              error={errors.email?.message}
+            />
+            <Input
+              type="text"
+              size="lg"
+              label="사업장 주소"
+              className="[&>label>span]:font-medium"
+              inputClassName="text-sm"
+              color="info"
+              placeholder="Enter your add"
+              {...register('email')}
+              error={errors.email?.message}
+            />
+            <Input
+              type="text"
+              size="lg"
+              label="대표자명"
+              className="[&>label>span]:font-medium"
+              inputClassName="text-sm"
+              color="info"
+              placeholder="Enter your name"
+              {...register('email')}
+              error={errors.email?.message}
+            />
+                        <Input
+              type="number"
+              size="lg"
+              label="전화번호"
+              className="[&>label>span]:font-medium"
+              inputClassName="text-sm"
+              color="info"
+              placeholder="Enter your number"
+              {...register('email')}
+              error={errors.email?.message}
+            />
+                        <Input
+              type="number"
+              size="lg"
+              label="휴대전화"
+              className="[&>label>span]:font-medium"
+              inputClassName="text-sm"
+              color="info"
+              placeholder="Enter your number"
+              {...register('email')}
+              error={errors.email?.message}
+            />
+            <Input
               type="email"
               size="lg"
-              label="Email"
-              className="col-span-2 [&>label>span]:font-medium"
+              label="이메일"
+              className="[&>label>span]:font-medium"
               inputClassName="text-sm"
               color="info"
               placeholder="Enter your email"
@@ -123,7 +200,40 @@ export default function SignUpForm() {
               {...register('password')}
               error={errors.password?.message}
             />
-            <Password
+            <Input
+              type="text"
+              size="lg"
+              label="통신 판매업 신고번호"
+              className="[&>label>span]:font-medium"
+              inputClassName="text-sm"
+              color="info"
+              placeholder="Enter your pin"
+              {...register('email')}
+              error={errors.email?.message}
+            />
+                        <Input
+              type="date"
+              size="lg"
+              label="개업일자"
+              className="[&>label>span]:font-medium"
+              inputClassName="text-sm"
+              color="info"
+              placeholder="Enter your date"
+              {...register('email')}
+              error={errors.email?.message}
+            />
+                        <Input
+              type="text"
+              size="lg"
+              label="사업체 분류"
+              className="[&>label>span]:font-medium"
+              inputClassName="text-sm"
+              color="info"
+              placeholder="Enter your category"
+              {...register('email')}
+              error={errors.email?.message}
+            />           
+            {/* <Password
               label="Confirm Password"
               placeholder="Enter confirm password"
               size="lg"
@@ -132,7 +242,7 @@ export default function SignUpForm() {
               inputClassName="text-sm"
               {...register('confirmPassword')}
               error={errors.confirmPassword?.message}
-            />
+            /> */}
             <div className="col-span-2 flex items-start ">
               <Checkbox
                 {...register('isAgreed')}

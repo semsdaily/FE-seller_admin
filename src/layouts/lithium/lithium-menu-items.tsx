@@ -143,7 +143,7 @@ export const menuItems: MenuItemsType[] = [
             href: routes.eCommerce.createProduct,
           },
           {
-            name: 'Edit Product',
+            name: '상품수정',
             href: routes.eCommerce.ediProduct(DUMMY_ID),
           },
           {
