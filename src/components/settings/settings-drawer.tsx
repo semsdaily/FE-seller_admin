@@ -251,9 +251,9 @@ export default function SettingsDrawer() {
       <SimpleBar className="h-[calc(100%-130px)]">
         <div className="px-5 py-6">
           <ThemeSwitcher />
-          <LayoutSwitcher />
+          {/* <LayoutSwitcher />
           <AppDirection />
-          <ColorOptions />
+          <ColorOptions /> */}
         </div>
       </SimpleBar>
       <a

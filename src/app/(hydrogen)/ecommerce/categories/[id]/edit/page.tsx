@@ -5,7 +5,7 @@ import CreateCategory from '@/app/shared/ecommerce/category/create-category';
 import Link from 'next/link';
 
 const pageHeader = {
-  title: 'Edit Category',
+  title: '카테고리 수정',
   breadcrumb: [
     {
       href: routes.eCommerce.dashboard,
@@ -13,10 +13,10 @@ const pageHeader = {
     },
     {
       href: routes.eCommerce.categories,
-      name: 'Categories',
+      name: '카테고리',
     },
     {
-      name: 'Edit',
+      name: '수정',
     },
   ],
 };

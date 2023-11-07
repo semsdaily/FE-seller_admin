@@ -92,7 +92,7 @@ export const getColumns = ({
     ),
   },
   {
-    title: <HeaderCell title="Customer" />,
+    title: <HeaderCell title="주문자" />,
     dataIndex: 'customer',
     key: 'customer',
     width: 250,
@@ -116,7 +116,7 @@ export const getColumns = ({
   {
     title: (
       <HeaderCell
-        title="Created"
+        title="주문날짜"
         sortable
         ascending={
           sortConfig?.direction === 'asc' && sortConfig?.key === 'createdAt'
@@ -132,7 +132,7 @@ export const getColumns = ({
   {
     title: (
       <HeaderCell
-        title="Due Date"
+        title="배송날짜"
         sortable
         ascending={
           sortConfig?.direction === 'asc' && sortConfig?.key === 'dueDate'
@@ -148,7 +148,7 @@ export const getColumns = ({
   {
     title: (
       <HeaderCell
-        title="Amount"
+        title="금액"
         sortable
         ascending={
           sortConfig?.direction === 'asc' && sortConfig?.key === 'amount'
@@ -166,7 +166,7 @@ export const getColumns = ({
     ),
   },
   {
-    title: <HeaderCell title="Status" />,
+    title: <HeaderCell title="상태" />,
     dataIndex: 'status',
     key: 'status',
     width: 120,

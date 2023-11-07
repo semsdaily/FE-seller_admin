@@ -11,7 +11,7 @@ import { exportToCSV } from '@/utils/export-to-csv';
 import ExportButton from '@/app/shared/export-button';
 
 const pageHeader = {
-  title: '정산목록',
+  title: '정산내역',
   breadcrumb: [
     {
       href: routes.eCommerce.dashboard,
@@ -22,7 +22,7 @@ const pageHeader = {
       name: '정산',
     },
     {
-      name: '목록',
+      name: '내역',
     },
   ],
 };
@@ -47,7 +47,7 @@ export default function InvoiceListPage() {
               className="w-full @lg:w-auto dark:bg-gray-100 dark:text-white dark:active:bg-gray-100"
             >
               <PiPlusBold className="me-1.5 h-[17px] w-[17px]" />
-              Add Invoice
+              수입내역추가
             </Button>
           </Link>
         </div>

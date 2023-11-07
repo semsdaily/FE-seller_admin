@@ -159,27 +159,27 @@ export default function PersonalInfoView() {
                     as="h2"
                     className="mb-2 text-xl font-semibold text-gray-900"
                   >
-                    Personal Info
+                    회원정보
                   </Title>
                   <Text className="text-sm text-gray-500">
-                    Update your photo and personal details here
+                    수정할 회원정보를 입력해주세요
                   </Text>
                 </div>
               </div>
 
               <div className="w-full max-w-screen-2xl">
                 <HorizontalFormBlockWrapper
-                  title="Name"
+                  title="이름"
                   titleClassName="text-base font-medium"
                 >
                   <Input
-                    placeholder="First Name"
+                    placeholder="성"
                     {...register('first_name')}
                     error={errors.first_name?.message}
                     className="flex-grow"
                   />
                   <Input
-                    placeholder="Last Name"
+                    placeholder="이름"
                     {...register('last_name')}
                     error={errors.last_name?.message}
                     className="flex-grow"
@@ -187,7 +187,7 @@ export default function PersonalInfoView() {
                 </HorizontalFormBlockWrapper>
 
                 <HorizontalFormBlockWrapper
-                  title="Email Address"
+                  title="Email"
                   titleClassName="text-base font-medium"
                 >
                   <Input
@@ -196,7 +196,7 @@ export default function PersonalInfoView() {
                       <PiEnvelopeSimple className="h-6 w-6 text-gray-500" />
                     }
                     type="email"
-                    placeholder="georgia.young@example.com"
+                    placeholder="@gmail.com"
                     {...register('email')}
                     error={errors.email?.message}
                   />
@@ -205,11 +205,11 @@ export default function PersonalInfoView() {
                 <HorizontalFormBlockWrapper
                   title={
                     <>
-                      Your Photo <PiQuestion className="h4 w-4 text-gray-500" />
+                      사진 <PiQuestion className="h4 w-4 text-gray-500" />
                     </>
                   }
                   titleClassName="flex gap-2 items-center"
-                  description="This will be displayed on your profile."
+                  description="사진을 올려주세요"
                 >
                   <div className="flex flex-col gap-6 @container @3xl:col-span-2 @7xl:flex-row">
                     <figure className="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-full border border-gray-200">
@@ -256,7 +256,7 @@ export default function PersonalInfoView() {
                 </HorizontalFormBlockWrapper>
 
                 <HorizontalFormBlockWrapper
-                  title="Role"
+                  title="판매자/관리자"
                   titleClassName="text-base font-medium"
                 >
                   <Controller
@@ -281,7 +281,7 @@ export default function PersonalInfoView() {
                 </HorizontalFormBlockWrapper>
 
                 <HorizontalFormBlockWrapper
-                  title="Country"
+                  title="지역"
                   titleClassName="text-base font-medium"
                 >
                   <Controller
@@ -309,7 +309,7 @@ export default function PersonalInfoView() {
                 <HorizontalFormBlockWrapper
                   title={
                     <>
-                      Timezone <PiQuestion className="h4 w-4 text-gray-500" />
+                      시각 <PiQuestion className="h4 w-4 text-gray-500" />
                     </>
                   }
                   titleClassName="flex gap-2 items-center"
@@ -338,7 +338,7 @@ export default function PersonalInfoView() {
                 </HorizontalFormBlockWrapper>
 
                 <HorizontalFormBlockWrapper
-                  title="Bio"
+                  title="설명"
                   titleClassName="text-base font-medium"
                 >
                   <Controller

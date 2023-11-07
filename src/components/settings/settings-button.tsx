@@ -1,21 +1,14 @@
 'use client';
 
-import { useEffect } from 'react';
-import dynamic from 'next/dynamic';
+import { useEffect, useState } from 'react';
 import cn from '@/utils/class-names';
-import { useDirection } from '@/hooks/use-direction';
 import CogSolidIcon from '@/components/icons/cog-solid';
 import { ActionIcon } from '@/components/ui/action-icon';
-import { DrawerHeader } from '@/components/settings/settings-drawer';
-import { usePresets } from '@/config/color-presets';
-import { useApplyColorPreset, useColorPresets } from '@/hooks/use-theme-color';
-import { useDrawer } from '@/app/shared/drawer-views/use-drawer';
-const SettingsDrawer = dynamic(
-  () => import('@/components/settings/settings-drawer'),
-  {
-    ssr: false,
-  }
-);
+import { presetDark, presetLight, usePresets } from '@/config/color-presets';
+import { useApplyColorPreset, useColorPresetName, useColorPresets } from '@/hooks/use-theme-color';
+import { useTheme } from 'next-themes';
+import { updateThemeColor } from '@/utils/update-theme-color';
+import { PiMoon, PiSun } from 'react-icons/pi';
 
 export default function SettingsButton({
   className,
@@ -25,18 +18,40 @@ export default function SettingsButton({
   children?: React.ReactNode;
 }) {
   const COLOR_PRESETS = usePresets();
-  const { openDrawer, closeDrawer } = useDrawer();
-  const { direction } = useDirection();
+  const [ isDark, setIsDark ] = useState<boolean>(false)
+  const { theme, setTheme } = useTheme();
   const { colorPresets } = useColorPresets();
+  const { colorPresetName } = useColorPresetName();
 
-  // to apply color preset value in css variable
   useApplyColorPreset<any>(colorPresets ?? COLOR_PRESETS[0].colors);
 
-  // to set html dir attribute on direction change
+  const changeDarkmode = () => {
+    setIsDark(!isDark)
+    if ( theme === 'light') {
+      setTheme('dark')
+    } else {
+      setTheme('light')
+    }
+  }
+
   useEffect(() => {
-    document.documentElement.dir = direction ?? 'ltr';
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [direction]);
+    if (theme === 'light' && colorPresetName === 'black') {
+      updateThemeColor(
+        presetLight.lighter,
+        presetLight.light,
+        presetLight.default,
+        presetLight.dark
+      );
+    }
+    if (theme === 'dark' && colorPresetName === 'black') {
+      updateThemeColor(
+        presetDark.lighter,
+        presetDark.light,
+        presetDark.default,
+        presetDark.dark
+      );
+    }
+  }, [theme, colorPresetName]);
 
   return (
     <ActionIcon
@@ -46,27 +61,11 @@ export default function SettingsButton({
         'relative h-[34px] w-[34px] shadow backdrop-blur-md dark:bg-gray-100 md:h-9 md:w-9',
         className
       )}
-      onClick={() =>
-        openDrawer({
-          view: (
-            <>
-              <DrawerHeader onClose={closeDrawer} />
-              <SettingsDrawer />
-            </>
-          ),
-          placement: 'right',
-          customSize: '420px',
-        })
+      onClick={changeDarkmode}
+     >
+      {
+        isDark ? <PiSun className="h-[22px] w-[22px] animate-spin-slow" /> : <PiMoon className="h-[22px] w-[22px] animate-bounce" />
       }
-    >
-      {children ? (
-        children
-      ) : (
-        <CogSolidIcon
-          strokeWidth={1.8}
-          className="h-[22px] w-auto animate-spin-slow"
-        />
-      )}
     </ActionIcon>
   );
 }
